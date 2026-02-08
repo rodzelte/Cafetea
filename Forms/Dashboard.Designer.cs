@@ -32,15 +32,17 @@
             panel1 = new Panel();
             logoName = new Label();
             pictureBox1 = new PictureBox();
-            panel2 = new Panel();
+            panel = new Panel();
+            promoBtn = new Button();
+            button1 = new Button();
             feedbackBtn = new Button();
+            orderBtn = new Button();
             customerBtn = new Button();
             dashboardBtn = new Button();
-            panel3 = new Panel();
-            button1 = new Button();
+            panelContainer = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel2.SuspendLayout();
+            panel.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -57,7 +59,7 @@
             // 
             logoName.AutoSize = true;
             logoName.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            logoName.ForeColor = SystemColors.Control;
+            logoName.ForeColor = Color.WhiteSmoke;
             logoName.Location = new Point(142, 53);
             logoName.Name = "logoName";
             logoName.Size = new Size(204, 23);
@@ -74,40 +76,91 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // panel2
+            // panel
             // 
-            panel2.BackColor = Color.FromArgb(16, 22, 27);
-            panel2.Controls.Add(button1);
-            panel2.Controls.Add(feedbackBtn);
-            panel2.Controls.Add(customerBtn);
-            panel2.Controls.Add(dashboardBtn);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 116);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1248, 81);
-            panel2.TabIndex = 1;
+            panel.BackColor = Color.FromArgb(16, 22, 27);
+            panel.Controls.Add(promoBtn);
+            panel.Controls.Add(button1);
+            panel.Controls.Add(feedbackBtn);
+            panel.Controls.Add(orderBtn);
+            panel.Controls.Add(customerBtn);
+            panel.Controls.Add(dashboardBtn);
+            panel.Dock = DockStyle.Top;
+            panel.Location = new Point(0, 116);
+            panel.Name = "panel";
+            panel.Size = new Size(1248, 81);
+            panel.TabIndex = 1;
+            // 
+            // promoBtn
+            // 
+            promoBtn.FlatAppearance.BorderSize = 0;
+            promoBtn.FlatStyle = FlatStyle.Flat;
+            promoBtn.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            promoBtn.ForeColor = Color.WhiteSmoke;
+            promoBtn.Image = (Image)resources.GetObject("promoBtn.Image");
+            promoBtn.Location = new Point(648, 7);
+            promoBtn.Name = "promoBtn";
+            promoBtn.Size = new Size(145, 65);
+            promoBtn.TabIndex = 5;
+            promoBtn.Text = "    Promos";
+            promoBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
+            promoBtn.UseVisualStyleBackColor = true;
+            promoBtn.Click += promoBtn_Click;
+            // 
+            // button1
+            // 
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.WhiteSmoke;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.Location = new Point(1054, 15);
+            button1.Name = "button1";
+            button1.Size = new Size(91, 48);
+            button1.TabIndex = 4;
+            button1.Text = "    Exit";
+            button1.TextImageRelation = TextImageRelation.ImageBeforeText;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // feedbackBtn
             // 
             feedbackBtn.FlatAppearance.BorderSize = 0;
             feedbackBtn.FlatStyle = FlatStyle.Flat;
             feedbackBtn.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            feedbackBtn.ForeColor = SystemColors.Control;
+            feedbackBtn.ForeColor = Color.WhiteSmoke;
             feedbackBtn.Image = (Image)resources.GetObject("feedbackBtn.Image");
-            feedbackBtn.Location = new Point(418, 15);
+            feedbackBtn.Location = new Point(524, 15);
             feedbackBtn.Name = "feedbackBtn";
             feedbackBtn.Size = new Size(142, 48);
-            feedbackBtn.TabIndex = 2;
-            feedbackBtn.Text = "    Orders";
+            feedbackBtn.TabIndex = 3;
+            feedbackBtn.Text = "    Feedback";
             feedbackBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
             feedbackBtn.UseVisualStyleBackColor = true;
+            feedbackBtn.Click += feedbackBtn_Click;
+            // 
+            // orderBtn
+            // 
+            orderBtn.FlatAppearance.BorderSize = 0;
+            orderBtn.FlatStyle = FlatStyle.Flat;
+            orderBtn.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            orderBtn.ForeColor = Color.WhiteSmoke;
+            orderBtn.Image = (Image)resources.GetObject("orderBtn.Image");
+            orderBtn.Location = new Point(401, 15);
+            orderBtn.Name = "orderBtn";
+            orderBtn.Size = new Size(142, 48);
+            orderBtn.TabIndex = 2;
+            orderBtn.Text = "    Orders";
+            orderBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
+            orderBtn.UseVisualStyleBackColor = true;
+            orderBtn.Click += orderBtn_Click;
             // 
             // customerBtn
             // 
             customerBtn.FlatAppearance.BorderSize = 0;
             customerBtn.FlatStyle = FlatStyle.Flat;
             customerBtn.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            customerBtn.ForeColor = SystemColors.Control;
+            customerBtn.ForeColor = Color.WhiteSmoke;
             customerBtn.Image = (Image)resources.GetObject("customerBtn.Image");
             customerBtn.Location = new Point(270, 15);
             customerBtn.Name = "customerBtn";
@@ -116,13 +169,14 @@
             customerBtn.Text = "    Customer";
             customerBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
             customerBtn.UseVisualStyleBackColor = true;
+            customerBtn.Click += customerBtn_Click;
             // 
             // dashboardBtn
             // 
             dashboardBtn.FlatAppearance.BorderSize = 0;
             dashboardBtn.FlatStyle = FlatStyle.Flat;
             dashboardBtn.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dashboardBtn.ForeColor = SystemColors.Control;
+            dashboardBtn.ForeColor = Color.WhiteSmoke;
             dashboardBtn.Image = (Image)resources.GetObject("dashboardBtn.Image");
             dashboardBtn.Location = new Point(122, 15);
             dashboardBtn.Name = "dashboardBtn";
@@ -131,38 +185,22 @@
             dashboardBtn.Text = "    Dashboard";
             dashboardBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
             dashboardBtn.UseVisualStyleBackColor = true;
+            dashboardBtn.Click += dashboardBtn_Click;
             // 
-            // panel3
+            // panelContainer
             // 
-            panel3.BackColor = Color.FromArgb(16, 22, 33);
-            panel3.Dock = DockStyle.Fill;
-            panel3.Location = new Point(0, 197);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(1248, 565);
-            panel3.TabIndex = 2;
-            // 
-            // button1
-            // 
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = SystemColors.Control;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(566, 15);
-            button1.Name = "button1";
-            button1.Size = new Size(142, 48);
-            button1.TabIndex = 3;
-            button1.Text = "    Feedback";
-            button1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            button1.UseVisualStyleBackColor = true;
+            panelContainer.Location = new Point(44, 197);
+            panelContainer.Name = "panelContainer";
+            panelContainer.Size = new Size(1204, 553);
+            panelContainer.TabIndex = 2;
             // 
             // Dashboard
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.FromArgb(16, 22, 27);
             ClientSize = new Size(1248, 762);
-            Controls.Add(panel3);
-            Controls.Add(panel2);
+            Controls.Add(panelContainer);
+            Controls.Add(panel);
             Controls.Add(panel1);
             Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
@@ -172,20 +210,22 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel2.ResumeLayout(false);
+            panel.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel1;
-        private Panel panel2;
-        private Panel panel3;
+        private Panel panel;
         private PictureBox pictureBox1;
         private Label logoName;
         private Button dashboardBtn;
-        private Button feedbackBtn;
+        private Button orderBtn;
         private Button customerBtn;
+        private Button feedbackBtn;
+        private Panel panelContainer;
         private Button button1;
+        private Button promoBtn;
     }
 }
