@@ -189,7 +189,7 @@
             // 
             // panelContainer
             // 
-            panelContainer.Location = new Point(44, 197);
+            panelContainer.Location = new Point(0, 197);
             panelContainer.Name = "panelContainer";
             panelContainer.Size = new Size(1204, 553);
             panelContainer.TabIndex = 2;

@@ -1,6 +1,6 @@
 ﻿namespace Cafetea.Forms
 {
-    partial class Login
+    partial class registerUC
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,119 +28,131 @@
         /// </summary>
         private void InitializeComponent()
         {
-            registerBtn = new LinkLabel();
+            panel1 = new Panel();
+            signinBtn = new LinkLabel();
             label5 = new Label();
             loginBtn = new Button();
             passwordField = new TextBox();
             usernameField = new TextBox();
             label4 = new Label();
-            loginLabel = new Label();
+            registerLabel = new Label();
             label3 = new Label();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // registerBtn
+            // panel1
             // 
-            registerBtn.AutoSize = true;
-            registerBtn.Location = new Point(180, 229);
-            registerBtn.Name = "registerBtn";
-            registerBtn.Size = new Size(48, 15);
-            registerBtn.TabIndex = 18;
-            registerBtn.TabStop = true;
-            registerBtn.Text = "Sign Up";
-         
+            panel1.Controls.Add(signinBtn);
+            panel1.Controls.Add(label5);
+            panel1.Controls.Add(loginBtn);
+            panel1.Controls.Add(passwordField);
+            panel1.Controls.Add(usernameField);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(registerLabel);
+            panel1.Controls.Add(label3);
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(293, 270);
+            panel1.TabIndex = 5;
+            // 
+            // signinBtn
+            // 
+            signinBtn.AutoSize = true;
+            signinBtn.Location = new Point(189, 226);
+            signinBtn.Name = "signinBtn";
+            signinBtn.Size = new Size(43, 15);
+            signinBtn.TabIndex = 10;
+            signinBtn.TabStop = true;
+            signinBtn.Text = "Sign In";
+        
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.ForeColor = Color.WhiteSmoke;
-            label5.Location = new Point(43, 229);
+            label5.Location = new Point(41, 226);
             label5.Name = "label5";
-            label5.Size = new Size(131, 15);
-            label5.TabIndex = 17;
-            label5.Text = "Don't have an account?";
+            label5.Size = new Size(142, 15);
+            label5.TabIndex = 8;
+            label5.Text = "Already have an account?";
             // 
             // loginBtn
             // 
-            loginBtn.Location = new Point(110, 192);
+            loginBtn.Location = new Point(108, 189);
             loginBtn.Name = "loginBtn";
             loginBtn.Size = new Size(75, 23);
-            loginBtn.TabIndex = 16;
-            loginBtn.Text = "LOGIN";
+            loginBtn.TabIndex = 7;
+            loginBtn.Text = "REGISTER";
             loginBtn.UseVisualStyleBackColor = true;
             // 
             // passwordField
             // 
-            passwordField.Location = new Point(33, 131);
+            passwordField.Location = new Point(31, 128);
             passwordField.Name = "passwordField";
             passwordField.Size = new Size(228, 23);
-            passwordField.TabIndex = 15;
+            passwordField.TabIndex = 6;
             // 
             // usernameField
             // 
-            usernameField.Location = new Point(33, 77);
+            usernameField.Location = new Point(31, 74);
             usernameField.Name = "usernameField";
             usernameField.Size = new Size(228, 23);
-            usernameField.TabIndex = 14;
+            usernameField.TabIndex = 5;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.ForeColor = Color.WhiteSmoke;
-            label4.Location = new Point(31, 113);
+            label4.Location = new Point(29, 110);
             label4.Name = "label4";
             label4.Size = new Size(68, 15);
-            label4.TabIndex = 13;
+            label4.TabIndex = 4;
             label4.Text = "PASSWORD";
             // 
-            // loginLabel
+            // registerLabel
             // 
-            loginLabel.AutoSize = true;
-            loginLabel.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            loginLabel.ForeColor = Color.WhiteSmoke;
-            loginLabel.Location = new Point(31, 27);
-            loginLabel.Name = "loginLabel";
-            loginLabel.Size = new Size(45, 15);
-            loginLabel.TabIndex = 11;
-            loginLabel.Text = "LOGIN";
+            registerLabel.AutoSize = true;
+            registerLabel.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            registerLabel.ForeColor = Color.WhiteSmoke;
+            registerLabel.Location = new Point(29, 24);
+            registerLabel.Name = "registerLabel";
+            registerLabel.Size = new Size(65, 15);
+            registerLabel.TabIndex = 2;
+            registerLabel.Text = "REGISTER";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.ForeColor = Color.WhiteSmoke;
-            label3.Location = new Point(31, 57);
+            label3.Location = new Point(29, 54);
             label3.Name = "label3";
             label3.Size = new Size(113, 15);
-            label3.TabIndex = 12;
+            label3.TabIndex = 3;
             label3.Text = "USERNAME / EMAIL";
             // 
-            // Login
+            // registerUC
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(16, 22, 27);
-            Controls.Add(registerBtn);
-            Controls.Add(label5);
-            Controls.Add(loginBtn);
-            Controls.Add(passwordField);
-            Controls.Add(usernameField);
-            Controls.Add(label4);
-            Controls.Add(loginLabel);
-            Controls.Add(label3);
-            Name = "Login";
+            Controls.Add(panel1);
+            Name = "registerUC";
             Size = new Size(293, 270);
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private LinkLabel registerBtn;
+        private Panel panel1;
+        private LinkLabel signinBtn;
         private Label label5;
         private Button loginBtn;
         private TextBox passwordField;
         private TextBox usernameField;
         private Label label4;
-        private Label loginLabel;
+        private Label registerLabel;
         private Label label3;
     }
 }

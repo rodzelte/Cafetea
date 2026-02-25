@@ -8,11 +8,12 @@ using System.Windows.Forms;
 
 namespace Cafetea.Forms
 {
-    public partial class Login : UserControl
+    public partial class registerUC : UserControl
     {
-        public Login()
+        public registerUC()
         {
             InitializeComponent();
         }
+
     }
 }

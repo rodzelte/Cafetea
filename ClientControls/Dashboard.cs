@@ -19,7 +19,7 @@ namespace Cafetea
             control.BringToFront();
         }
 
-
+        // DONT TOUCH THESE METHODS//
         private void dashboardBtn_Click(object sender, EventArgs e)
         {
             LoadAdminControl(new UCDashboard());
@@ -49,6 +49,9 @@ namespace Cafetea
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
+        }       // DONT TOUCH THESE METHODS//
+
+
+
     }
 }
