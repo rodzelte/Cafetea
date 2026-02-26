@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            roleDropdown = new ComboBox();
+            label1 = new Label();
             signinBtn = new LinkLabel();
             label5 = new Label();
             loginBtn = new Button();
@@ -42,6 +44,8 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(roleDropdown);
+            panel1.Controls.Add(label1);
             panel1.Controls.Add(signinBtn);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(loginBtn);
@@ -52,25 +56,44 @@
             panel1.Controls.Add(label3);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(293, 270);
+            panel1.Size = new Size(293, 300);
             panel1.TabIndex = 5;
+            // 
+            // roleDropdown
+            // 
+            roleDropdown.FormattingEnabled = true;
+            roleDropdown.Items.AddRange(new object[] { "Client", "Staff" });
+            roleDropdown.Location = new Point(34, 178);
+            roleDropdown.Name = "roleDropdown";
+            roleDropdown.Size = new Size(225, 23);
+            roleDropdown.TabIndex = 13;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.ForeColor = Color.WhiteSmoke;
+            label1.Location = new Point(31, 160);
+            label1.Name = "label1";
+            label1.Size = new Size(35, 15);
+            label1.TabIndex = 12;
+            label1.Text = "ROLE";
             // 
             // signinBtn
             // 
             signinBtn.AutoSize = true;
-            signinBtn.Location = new Point(189, 226);
+            signinBtn.Location = new Point(184, 261);
             signinBtn.Name = "signinBtn";
             signinBtn.Size = new Size(43, 15);
             signinBtn.TabIndex = 10;
             signinBtn.TabStop = true;
             signinBtn.Text = "Sign In";
-        
+            signinBtn.LinkClicked += signinBtn_LinkClicked;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.ForeColor = Color.WhiteSmoke;
-            label5.Location = new Point(41, 226);
+            label5.Location = new Point(31, 261);
             label5.Name = "label5";
             label5.Size = new Size(142, 15);
             label5.TabIndex = 8;
@@ -78,12 +101,13 @@
             // 
             // loginBtn
             // 
-            loginBtn.Location = new Point(108, 189);
+            loginBtn.Location = new Point(107, 221);
             loginBtn.Name = "loginBtn";
             loginBtn.Size = new Size(75, 23);
             loginBtn.TabIndex = 7;
             loginBtn.Text = "REGISTER";
             loginBtn.UseVisualStyleBackColor = true;
+            loginBtn.Click += loginBtn_Click;
             // 
             // passwordField
             // 
@@ -137,7 +161,7 @@
             BackColor = Color.FromArgb(16, 22, 27);
             Controls.Add(panel1);
             Name = "registerUC";
-            Size = new Size(293, 270);
+            Size = new Size(293, 303);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -154,5 +178,7 @@
         private Label label4;
         private Label registerLabel;
         private Label label3;
+        private Label label1;
+        private ComboBox roleDropdown;
     }
 }

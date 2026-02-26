@@ -13,7 +13,15 @@ namespace Cafetea.Forms
         public MainForm()
         {
             InitializeComponent();
+            LoadFormControl(new loginUC());
+        }
 
-        }   
+        public void LoadFormControl(UserControl control)
+        {
+            control.Dock = DockStyle.Fill;
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(control);
+            control.BringToFront();
+        }
     }
 }

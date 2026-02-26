@@ -1,6 +1,6 @@
 ﻿namespace Cafetea.Forms
 {
-    partial class Login
+    partial class loginUC
     {
         /// <summary> 
         /// Required designer variable.
@@ -47,7 +47,7 @@
             registerBtn.TabIndex = 18;
             registerBtn.TabStop = true;
             registerBtn.Text = "Sign Up";
-         
+            registerBtn.LinkClicked += registerBtn_LinkClicked;
             // 
             // label5
             // 
@@ -67,6 +67,7 @@
             loginBtn.TabIndex = 16;
             loginBtn.Text = "LOGIN";
             loginBtn.UseVisualStyleBackColor = true;
+            loginBtn.Click += loginBtn_Click;
             // 
             // passwordField
             // 
@@ -74,6 +75,7 @@
             passwordField.Name = "passwordField";
             passwordField.Size = new Size(228, 23);
             passwordField.TabIndex = 15;
+            passwordField.TextChanged += passwordField_TextChanged;
             // 
             // usernameField
             // 
@@ -81,6 +83,7 @@
             usernameField.Name = "usernameField";
             usernameField.Size = new Size(228, 23);
             usernameField.TabIndex = 14;
+            usernameField.TextChanged += usernameField_TextChanged;
             // 
             // label4
             // 
@@ -113,7 +116,7 @@
             label3.TabIndex = 12;
             label3.Text = "USERNAME / EMAIL";
             // 
-            // Login
+            // loginUC
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -126,7 +129,7 @@
             Controls.Add(label4);
             Controls.Add(loginLabel);
             Controls.Add(label3);
-            Name = "Login";
+            Name = "loginUC";
             Size = new Size(293, 270);
             ResumeLayout(false);
             PerformLayout();

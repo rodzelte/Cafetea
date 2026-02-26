@@ -32,5 +32,11 @@ namespace Cafetea.Database
         {
             return new SqlConnection(connectionString);
         }
+
+
+       
+
+
+
+        }
     }
-}

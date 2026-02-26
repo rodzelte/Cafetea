@@ -38,7 +38,7 @@
             // 
             mainPanel.Location = new Point(46, 282);
             mainPanel.Name = "mainPanel";
-            mainPanel.Size = new Size(293, 270);
+            mainPanel.Size = new Size(293, 338);
             mainPanel.TabIndex = 0;
             // 
             // pictureBox1
@@ -72,6 +72,6 @@
 
         private Panel mainPanel;
         private PictureBox pictureBox1;
-        private PaintEventHandler panel1_Paint_1;
+      
     }
 }

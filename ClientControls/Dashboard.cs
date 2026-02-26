@@ -11,7 +11,7 @@ namespace Cafetea
         }
 
 
-        private void LoadAdminControl(UserControl control)
+        public void LoadAdminControl(UserControl control)
         {
             control.Dock = DockStyle.Fill;
             panelContainer.Controls.Clear();

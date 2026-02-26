@@ -16,6 +16,7 @@ namespace Cafetea
                 {
                     conn.Open();
                     MessageBox.Show("Successfully connected to the database!");
+                    Application.Run(new MainForm());
                 }
             }
             catch (Exception ex)
@@ -24,7 +25,7 @@ namespace Cafetea
                 MessageBox.Show($"Connection Error: {ex.Message}\n\nDetail: {ex.InnerException?.Message}");
             }
 
-            Application.Run(new MainForm());
+          
         }
     }
 }
