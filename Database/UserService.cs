@@ -4,7 +4,7 @@ namespace Cafetea.Database
 {
     public static class UserService
     {
-        // Returns the role of the user if login is correct, otherwise null
+
         public static string? Login(string username, string password)
         {
             using (SqlConnection conn = Database.GetConnection())
@@ -56,3 +56,4 @@ namespace Cafetea.Database
 
 
     }
+}

@@ -1,0 +1,7 @@
+CREATE TABLE PromoCodes (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Code NVARCHAR(50) NOT NULL UNIQUE,
+    Description NVARCHAR(255),
+    DiscountPercent DECIMAL(5,2) NOT NULL,
+    IsActive BIT NOT NULL DEFAULT 1
+);

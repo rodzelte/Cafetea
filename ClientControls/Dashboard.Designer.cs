@@ -52,7 +52,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1248, 116);
+            panel1.Size = new Size(1378, 116);
             panel1.TabIndex = 0;
             // 
             // logoName
@@ -88,7 +88,7 @@
             panel.Dock = DockStyle.Top;
             panel.Location = new Point(0, 116);
             panel.Name = "panel";
-            panel.Size = new Size(1248, 81);
+            panel.Size = new Size(1378, 81);
             panel.TabIndex = 1;
             // 
             // promoBtn
@@ -98,7 +98,7 @@
             promoBtn.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             promoBtn.ForeColor = Color.WhiteSmoke;
             promoBtn.Image = (Image)resources.GetObject("promoBtn.Image");
-            promoBtn.Location = new Point(648, 7);
+            promoBtn.Location = new Point(611, 7);
             promoBtn.Name = "promoBtn";
             promoBtn.Size = new Size(145, 65);
             promoBtn.TabIndex = 5;
@@ -114,7 +114,7 @@
             button1.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.WhiteSmoke;
             button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(1054, 15);
+            button1.Location = new Point(827, 15);
             button1.Name = "button1";
             button1.Size = new Size(91, 48);
             button1.TabIndex = 4;
@@ -130,7 +130,7 @@
             feedbackBtn.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             feedbackBtn.ForeColor = Color.WhiteSmoke;
             feedbackBtn.Image = (Image)resources.GetObject("feedbackBtn.Image");
-            feedbackBtn.Location = new Point(524, 15);
+            feedbackBtn.Location = new Point(474, 15);
             feedbackBtn.Name = "feedbackBtn";
             feedbackBtn.Size = new Size(142, 48);
             feedbackBtn.TabIndex = 3;
@@ -146,7 +146,7 @@
             orderBtn.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             orderBtn.ForeColor = Color.WhiteSmoke;
             orderBtn.Image = (Image)resources.GetObject("orderBtn.Image");
-            orderBtn.Location = new Point(401, 15);
+            orderBtn.Location = new Point(326, 15);
             orderBtn.Name = "orderBtn";
             orderBtn.Size = new Size(142, 48);
             orderBtn.TabIndex = 2;
@@ -162,7 +162,7 @@
             customerBtn.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             customerBtn.ForeColor = Color.WhiteSmoke;
             customerBtn.Image = (Image)resources.GetObject("customerBtn.Image");
-            customerBtn.Location = new Point(270, 15);
+            customerBtn.Location = new Point(178, 15);
             customerBtn.Name = "customerBtn";
             customerBtn.Size = new Size(142, 48);
             customerBtn.TabIndex = 1;
@@ -178,7 +178,7 @@
             dashboardBtn.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dashboardBtn.ForeColor = Color.WhiteSmoke;
             dashboardBtn.Image = (Image)resources.GetObject("dashboardBtn.Image");
-            dashboardBtn.Location = new Point(122, 15);
+            dashboardBtn.Location = new Point(30, 15);
             dashboardBtn.Name = "dashboardBtn";
             dashboardBtn.Size = new Size(142, 48);
             dashboardBtn.TabIndex = 0;
@@ -191,14 +191,14 @@
             // 
             panelContainer.Location = new Point(0, 197);
             panelContainer.Name = "panelContainer";
-            panelContainer.Size = new Size(1204, 553);
+            panelContainer.Size = new Size(1378, 544);
             panelContainer.TabIndex = 2;
             // 
             // Dashboard
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.FromArgb(16, 22, 27);
-            ClientSize = new Size(1248, 762);
+            ClientSize = new Size(1378, 744);
             Controls.Add(panelContainer);
             Controls.Add(panel);
             Controls.Add(panel1);

@@ -75,6 +75,7 @@
             passwordField.Name = "passwordField";
             passwordField.Size = new Size(228, 23);
             passwordField.TabIndex = 15;
+            passwordField.UseSystemPasswordChar = true;
             passwordField.TextChanged += passwordField_TextChanged;
             // 
             // usernameField

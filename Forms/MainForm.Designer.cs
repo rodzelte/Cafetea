@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             mainPanel = new Panel();
             pictureBox1 = new PictureBox();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -52,12 +53,29 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.WhiteSmoke;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.Location = new Point(286, 12);
+            button1.Name = "button1";
+            button1.Size = new Size(88, 46);
+            button1.TabIndex = 5;
+            button1.Text = "    Exit";
+            button1.TextImageRelation = TextImageRelation.ImageBeforeText;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(16, 22, 27);
             ClientSize = new Size(389, 649);
+            Controls.Add(button1);
             Controls.Add(pictureBox1);
             Controls.Add(mainPanel);
             FormBorderStyle = FormBorderStyle.None;
@@ -72,6 +90,6 @@
 
         private Panel mainPanel;
         private PictureBox pictureBox1;
-      
+        private Button button1;
     }
 }

@@ -23,5 +23,10 @@ namespace Cafetea.Forms
             mainPanel.Controls.Add(control);
             control.BringToFront();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -95,7 +95,7 @@
             panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(78, 169);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1062, 368);
+            panel1.Size = new Size(1085, 378);
             panel1.TabIndex = 6;
             // 
             // panel2
@@ -119,7 +119,7 @@
             panel5.Controls.Add(label10);
             panel5.Location = new Point(3, 64);
             panel5.Name = "panel5";
-            panel5.Size = new Size(981, 96);
+            panel5.Size = new Size(981, 89);
             panel5.TabIndex = 10;
             // 
             // pictureBox2
@@ -341,7 +341,7 @@
             Controls.Add(label1);
             Controls.Add(panel1);
             Name = "UCCustomer";
-            Size = new Size(1248, 598);
+            Size = new Size(1271, 635);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);

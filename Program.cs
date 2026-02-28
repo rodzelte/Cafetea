@@ -16,7 +16,7 @@ namespace Cafetea
                 {
                     conn.Open();
                     MessageBox.Show("Successfully connected to the database!");
-                    Application.Run(new MainForm());
+                    Application.Run(new Dashboard());
                 }
             }
             catch (Exception ex)
