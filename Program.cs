@@ -12,7 +12,7 @@ namespace Cafetea
             ApplicationConfiguration.Initialize();
             try
             {
-                using (var conn = Cafetea.Database.Database.GetConnection())
+                using (var conn = Database.Connection.Database.GetConnection())
                 {
                     conn.Open();
                     MessageBox.Show("Successfully connected to the database!");

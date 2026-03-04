@@ -1,13 +1,14 @@
 ﻿using Microsoft.Data.SqlClient;
 
-namespace Cafetea.Database
+
+namespace Cafetea.Database.FormService
 {
     public static class UserService
     {
 
         public static string? Login(string username, string password)
         {
-            using (SqlConnection conn = Database.GetConnection())
+            using (SqlConnection conn = Connection.Database.GetConnection())
             {
                 conn.Open();
 
@@ -27,7 +28,7 @@ namespace Cafetea.Database
 
         public static bool Register(string username, string password, string role)
         {
-            using (SqlConnection conn = Database.GetConnection())
+            using (SqlConnection conn = Connection.Database.GetConnection())
             {
                 conn.Open();
 

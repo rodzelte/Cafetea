@@ -19,7 +19,7 @@ namespace Cafetea.Database
         // Add a new promo
         public static bool AddPromo(string code, string description, decimal discountPercent)
         {
-            using (var conn = Database.GetConnection())
+            using (var conn = Connection.Database.GetConnection())
             {
                 conn.Open();
 
@@ -53,7 +53,7 @@ namespace Cafetea.Database
         {
             var list = new List<PromoModel>();
 
-            using (var conn = Database.GetConnection())
+            using (var conn = Connection.Database.GetConnection())
             {
                 conn.Open();
                 string query = "SELECT Id, Code, Description, DiscountPercent, IsActive FROM PromoCodes";
@@ -81,7 +81,7 @@ namespace Cafetea.Database
         // Delete a promo by Id
         public static bool DeletePromo(int id)
         {
-            using (var conn = Database.GetConnection())
+            using (var conn = Connection.Database.GetConnection())
             {
                 conn.Open();
 
@@ -99,7 +99,7 @@ namespace Cafetea.Database
         // Optional: Get a promo by code
         public static PromoModel? GetPromoByCode(string code)
         {
-            using (var conn = Database.GetConnection())
+            using (var conn = Connection.Database.GetConnection())
             {
                 conn.Open();
 

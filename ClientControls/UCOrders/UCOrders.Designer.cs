@@ -34,38 +34,36 @@
             panel1 = new Panel();
             panel4 = new Panel();
             pictureBox2 = new PictureBox();
-            label22 = new Label();
+            orderthisweekLbl = new Label();
             label19 = new Label();
             panel3 = new Panel();
             pictureBox1 = new PictureBox();
-            label21 = new Label();
+            revenueLbl = new Label();
             label18 = new Label();
             panel2 = new Panel();
             pictureBox7 = new PictureBox();
-            label20 = new Label();
+            orderTodaylbl = new Label();
             label17 = new Label();
             panel5 = new Panel();
-            textBox1 = new TextBox();
-            comboBox2 = new ComboBox();
-            comboBox1 = new ComboBox();
+            customerTextbox = new TextBox();
+            statusOrderCb = new ComboBox();
+            daterangeCb = new ComboBox();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
-            panel6 = new Panel();
-            panel7 = new Panel();
-            label16 = new Label();
+            orderPanel = new Panel();
+            totalOrderlbl = new Label();
             label15 = new Label();
-            button2 = new Button();
-            button1 = new Button();
-            label14 = new Label();
-            label13 = new Label();
+            timeOrderlbl = new Label();
+            dateOrderlbl = new Label();
             label12 = new Label();
-            label11 = new Label();
+            statusOrderLbl = new Label();
             label10 = new Label();
-            label9 = new Label();
+            listordernameLbl = new Label();
             label8 = new Label();
-            label7 = new Label();
-            label6 = new Label();
+            ordercustomernameLbl = new Label();
+            orderNumberLbl = new Label();
+            flowLayoutPanelOrder = new FlowLayoutPanel();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -74,8 +72,8 @@
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             panel5.SuspendLayout();
-            panel6.SuspendLayout();
-            panel7.SuspendLayout();
+            orderPanel.SuspendLayout();
+            flowLayoutPanelOrder.SuspendLayout();
             SuspendLayout();
             // 
             // label2
@@ -112,7 +110,7 @@
             // panel4
             // 
             panel4.Controls.Add(pictureBox2);
-            panel4.Controls.Add(label22);
+            panel4.Controls.Add(orderthisweekLbl);
             panel4.Controls.Add(label19);
             panel4.Location = new Point(669, 20);
             panel4.Name = "panel4";
@@ -128,16 +126,16 @@
             pictureBox2.TabIndex = 20;
             pictureBox2.TabStop = false;
             // 
-            // label22
+            // orderthisweekLbl
             // 
-            label22.AutoSize = true;
-            label22.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label22.ForeColor = Color.WhiteSmoke;
-            label22.Location = new Point(89, 13);
-            label22.Name = "label22";
-            label22.Size = new Size(37, 21);
-            label22.TabIndex = 17;
-            label22.Text = "156";
+            orderthisweekLbl.AutoSize = true;
+            orderthisweekLbl.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            orderthisweekLbl.ForeColor = Color.WhiteSmoke;
+            orderthisweekLbl.Location = new Point(89, 13);
+            orderthisweekLbl.Name = "orderthisweekLbl";
+            orderthisweekLbl.Size = new Size(37, 21);
+            orderthisweekLbl.TabIndex = 17;
+            orderthisweekLbl.Text = "156";
             // 
             // label19
             // 
@@ -153,7 +151,7 @@
             // panel3
             // 
             panel3.Controls.Add(pictureBox1);
-            panel3.Controls.Add(label21);
+            panel3.Controls.Add(revenueLbl);
             panel3.Controls.Add(label18);
             panel3.Location = new Point(352, 20);
             panel3.Name = "panel3";
@@ -169,16 +167,16 @@
             pictureBox1.TabIndex = 19;
             pictureBox1.TabStop = false;
             // 
-            // label21
+            // revenueLbl
             // 
-            label21.AutoSize = true;
-            label21.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label21.ForeColor = Color.WhiteSmoke;
-            label21.Location = new Point(79, 13);
-            label21.Name = "label21";
-            label21.Size = new Size(68, 21);
-            label21.TabIndex = 16;
-            label21.Text = "$487.50";
+            revenueLbl.AutoSize = true;
+            revenueLbl.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            revenueLbl.ForeColor = Color.WhiteSmoke;
+            revenueLbl.Location = new Point(79, 13);
+            revenueLbl.Name = "revenueLbl";
+            revenueLbl.Size = new Size(68, 21);
+            revenueLbl.TabIndex = 16;
+            revenueLbl.Text = "$487.50";
             // 
             // label18
             // 
@@ -194,7 +192,7 @@
             // panel2
             // 
             panel2.Controls.Add(pictureBox7);
-            panel2.Controls.Add(label20);
+            panel2.Controls.Add(orderTodaylbl);
             panel2.Controls.Add(label17);
             panel2.Location = new Point(25, 20);
             panel2.Name = "panel2";
@@ -210,16 +208,16 @@
             pictureBox7.TabIndex = 18;
             pictureBox7.TabStop = false;
             // 
-            // label20
+            // orderTodaylbl
             // 
-            label20.AutoSize = true;
-            label20.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label20.ForeColor = Color.WhiteSmoke;
-            label20.Location = new Point(74, 13);
-            label20.Name = "label20";
-            label20.Size = new Size(28, 21);
-            label20.TabIndex = 15;
-            label20.Text = "23";
+            orderTodaylbl.AutoSize = true;
+            orderTodaylbl.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            orderTodaylbl.ForeColor = Color.WhiteSmoke;
+            orderTodaylbl.Location = new Point(74, 13);
+            orderTodaylbl.Name = "orderTodaylbl";
+            orderTodaylbl.Size = new Size(28, 21);
+            orderTodaylbl.TabIndex = 15;
+            orderTodaylbl.Text = "23";
             // 
             // label17
             // 
@@ -234,9 +232,9 @@
             // 
             // panel5
             // 
-            panel5.Controls.Add(textBox1);
-            panel5.Controls.Add(comboBox2);
-            panel5.Controls.Add(comboBox1);
+            panel5.Controls.Add(customerTextbox);
+            panel5.Controls.Add(statusOrderCb);
+            panel5.Controls.Add(daterangeCb);
             panel5.Controls.Add(label5);
             panel5.Controls.Add(label4);
             panel5.Controls.Add(label3);
@@ -245,31 +243,31 @@
             panel5.Size = new Size(963, 79);
             panel5.TabIndex = 9;
             // 
-            // textBox1
+            // customerTextbox
             // 
-            textBox1.Location = new Point(669, 29);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Search";
-            textBox1.Size = new Size(247, 23);
-            textBox1.TabIndex = 14;
+            customerTextbox.Location = new Point(669, 29);
+            customerTextbox.Name = "customerTextbox";
+            customerTextbox.PlaceholderText = "Search";
+            customerTextbox.Size = new Size(247, 23);
+            customerTextbox.TabIndex = 14;
             // 
-            // comboBox2
+            // statusOrderCb
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "All Orders", "Pending", "In Progress", "Completed" });
-            comboBox2.Location = new Point(352, 29);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(281, 23);
-            comboBox2.TabIndex = 13;
+            statusOrderCb.FormattingEnabled = true;
+            statusOrderCb.Items.AddRange(new object[] { "All Orders", "Pending", "In Progress", "Completed" });
+            statusOrderCb.Location = new Point(352, 29);
+            statusOrderCb.Name = "statusOrderCb";
+            statusOrderCb.Size = new Size(281, 23);
+            statusOrderCb.TabIndex = 13;
             // 
-            // comboBox1
+            // daterangeCb
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Today", "This Week", "This Month" });
-            comboBox1.Location = new Point(25, 29);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(259, 23);
-            comboBox1.TabIndex = 10;
+            daterangeCb.FormattingEnabled = true;
+            daterangeCb.Items.AddRange(new object[] { "Today", "This Week", "This Month" });
+            daterangeCb.Location = new Point(25, 29);
+            daterangeCb.Name = "daterangeCb";
+            daterangeCb.Size = new Size(259, 23);
+            daterangeCb.TabIndex = 10;
             // 
             // label5
             // 
@@ -301,45 +299,34 @@
             label3.TabIndex = 10;
             label3.Text = "Date Range";
             // 
-            // panel6
+            // orderPanel
             // 
-            panel6.AutoScroll = true;
-            panel6.Controls.Add(panel7);
-            panel6.Location = new Point(145, 351);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(963, 125);
-            panel6.TabIndex = 10;
+            orderPanel.Controls.Add(totalOrderlbl);
+            orderPanel.Controls.Add(label15);
+            orderPanel.Controls.Add(timeOrderlbl);
+            orderPanel.Controls.Add(dateOrderlbl);
+            orderPanel.Controls.Add(label12);
+            orderPanel.Controls.Add(statusOrderLbl);
+            orderPanel.Controls.Add(label10);
+            orderPanel.Controls.Add(listordernameLbl);
+            orderPanel.Controls.Add(label8);
+            orderPanel.Controls.Add(ordercustomernameLbl);
+            orderPanel.Controls.Add(orderNumberLbl);
+            orderPanel.Location = new Point(3, 3);
+            orderPanel.Name = "orderPanel";
+            orderPanel.Size = new Size(942, 97);
+            orderPanel.TabIndex = 0;
             // 
-            // panel7
+            // totalOrderlbl
             // 
-            panel7.Controls.Add(label16);
-            panel7.Controls.Add(label15);
-            panel7.Controls.Add(button2);
-            panel7.Controls.Add(button1);
-            panel7.Controls.Add(label14);
-            panel7.Controls.Add(label13);
-            panel7.Controls.Add(label12);
-            panel7.Controls.Add(label11);
-            panel7.Controls.Add(label10);
-            panel7.Controls.Add(label9);
-            panel7.Controls.Add(label8);
-            panel7.Controls.Add(label7);
-            panel7.Controls.Add(label6);
-            panel7.Location = new Point(17, 15);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(919, 97);
-            panel7.TabIndex = 0;
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label16.ForeColor = Color.WhiteSmoke;
-            label16.Location = new Point(717, 39);
-            label16.Name = "label16";
-            label16.Size = new Size(72, 25);
-            label16.TabIndex = 14;
-            label16.Text = "$12.59";
+            totalOrderlbl.AutoSize = true;
+            totalOrderlbl.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            totalOrderlbl.ForeColor = Color.WhiteSmoke;
+            totalOrderlbl.Location = new Point(717, 39);
+            totalOrderlbl.Name = "totalOrderlbl";
+            totalOrderlbl.Size = new Size(72, 25);
+            totalOrderlbl.TabIndex = 14;
+            totalOrderlbl.Text = "$12.59";
             // 
             // label15
             // 
@@ -352,45 +339,27 @@
             label15.TabIndex = 13;
             label15.Text = "Total";
             // 
-            // button2
+            // timeOrderlbl
             // 
-            button2.Location = new Point(815, 45);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 12;
-            button2.Text = "EDIT";
-            button2.UseVisualStyleBackColor = true;
+            timeOrderlbl.AutoSize = true;
+            timeOrderlbl.Font = new Font("Segoe UI Semilight", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            timeOrderlbl.ForeColor = Color.WhiteSmoke;
+            timeOrderlbl.Location = new Point(594, 55);
+            timeOrderlbl.Name = "timeOrderlbl";
+            timeOrderlbl.Size = new Size(68, 17);
+            timeOrderlbl.TabIndex = 8;
+            timeOrderlbl.Text = "10 : 30 AM";
             // 
-            // button1
+            // dateOrderlbl
             // 
-            button1.Location = new Point(815, 16);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 11;
-            button1.Text = "VIEW";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI Semilight", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label14.ForeColor = Color.WhiteSmoke;
-            label14.Location = new Point(594, 55);
-            label14.Name = "label14";
-            label14.Size = new Size(68, 17);
-            label14.TabIndex = 8;
-            label14.Text = "10 : 30 AM";
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.ForeColor = Color.WhiteSmoke;
-            label13.Location = new Point(594, 38);
-            label13.Name = "label13";
-            label13.Size = new Size(74, 17);
-            label13.TabIndex = 7;
-            label13.Text = "Feb 1, 2026";
+            dateOrderlbl.AutoSize = true;
+            dateOrderlbl.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dateOrderlbl.ForeColor = Color.WhiteSmoke;
+            dateOrderlbl.Location = new Point(594, 38);
+            dateOrderlbl.Name = "dateOrderlbl";
+            dateOrderlbl.Size = new Size(74, 17);
+            dateOrderlbl.TabIndex = 7;
+            dateOrderlbl.Text = "Feb 1, 2026";
             // 
             // label12
             // 
@@ -403,16 +372,16 @@
             label12.TabIndex = 6;
             label12.Text = "Date & Time";
             // 
-            // label11
+            // statusOrderLbl
             // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label11.ForeColor = Color.WhiteSmoke;
-            label11.Location = new Point(446, 35);
-            label11.Name = "label11";
-            label11.Size = new Size(94, 21);
-            label11.TabIndex = 5;
-            label11.Text = "Completed";
+            statusOrderLbl.AutoSize = true;
+            statusOrderLbl.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            statusOrderLbl.ForeColor = Color.WhiteSmoke;
+            statusOrderLbl.Location = new Point(446, 35);
+            statusOrderLbl.Name = "statusOrderLbl";
+            statusOrderLbl.Size = new Size(94, 21);
+            statusOrderLbl.TabIndex = 5;
+            statusOrderLbl.Text = "Completed";
             // 
             // label10
             // 
@@ -425,16 +394,16 @@
             label10.TabIndex = 4;
             label10.Text = "Status";
             // 
-            // label9
+            // listordernameLbl
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.ForeColor = Color.WhiteSmoke;
-            label9.Location = new Point(155, 65);
-            label9.Name = "label9";
-            label9.Size = new Size(70, 17);
-            label9.TabIndex = 3;
-            label9.Text = "Cappucino";
+            listordernameLbl.AutoSize = true;
+            listordernameLbl.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            listordernameLbl.ForeColor = Color.WhiteSmoke;
+            listordernameLbl.Location = new Point(155, 65);
+            listordernameLbl.Name = "listordernameLbl";
+            listordernameLbl.Size = new Size(70, 17);
+            listordernameLbl.TabIndex = 3;
+            listordernameLbl.Text = "Cappucino";
             // 
             // label8
             // 
@@ -447,34 +416,42 @@
             label8.TabIndex = 2;
             label8.Text = "Items:";
             // 
-            // label7
+            // ordercustomernameLbl
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.WhiteSmoke;
-            label7.Location = new Point(107, 39);
-            label7.Name = "label7";
-            label7.Size = new Size(63, 17);
-            label7.TabIndex = 1;
-            label7.Text = "John Doe";
+            ordercustomernameLbl.AutoSize = true;
+            ordercustomernameLbl.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ordercustomernameLbl.ForeColor = Color.WhiteSmoke;
+            ordercustomernameLbl.Location = new Point(107, 39);
+            ordercustomernameLbl.Name = "ordercustomernameLbl";
+            ordercustomernameLbl.Size = new Size(63, 17);
+            ordercustomernameLbl.TabIndex = 1;
+            ordercustomernameLbl.Text = "John Doe";
             // 
-            // label6
+            // orderNumberLbl
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.WhiteSmoke;
-            label6.Location = new Point(107, 18);
-            label6.Name = "label6";
-            label6.Size = new Size(77, 21);
-            label6.TabIndex = 0;
-            label6.Text = "ORD-001";
+            orderNumberLbl.AutoSize = true;
+            orderNumberLbl.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            orderNumberLbl.ForeColor = Color.WhiteSmoke;
+            orderNumberLbl.Location = new Point(107, 18);
+            orderNumberLbl.Name = "orderNumberLbl";
+            orderNumberLbl.Size = new Size(77, 21);
+            orderNumberLbl.TabIndex = 0;
+            orderNumberLbl.Text = "ORD-001";
+            // 
+            // flowLayoutPanelOrder
+            // 
+            flowLayoutPanelOrder.Controls.Add(orderPanel);
+            flowLayoutPanelOrder.Location = new Point(145, 347);
+            flowLayoutPanelOrder.Name = "flowLayoutPanelOrder";
+            flowLayoutPanelOrder.Size = new Size(963, 104);
+            flowLayoutPanelOrder.TabIndex = 11;
             // 
             // UCOrders
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(16, 22, 33);
-            Controls.Add(panel6);
+            Controls.Add(flowLayoutPanelOrder);
             Controls.Add(panel5);
             Controls.Add(panel1);
             Controls.Add(label2);
@@ -493,9 +470,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
-            panel6.ResumeLayout(false);
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
+            orderPanel.ResumeLayout(false);
+            orderPanel.PerformLayout();
+            flowLayoutPanelOrder.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -509,35 +486,33 @@
         private Panel panel3;
         private Panel panel2;
         private Panel panel5;
-        private TextBox textBox1;
-        private ComboBox comboBox2;
-        private ComboBox comboBox1;
+        private TextBox customerTextbox;
+        private ComboBox statusOrderCb;
+        private ComboBox daterangeCb;
         private Label label5;
         private Label label4;
         private Label label3;
-        private Panel panel6;
-        private Panel panel7;
-        private Label label7;
-        private Label label6;
+        private Panel orderPanel;
+        private Label ordercustomernameLbl;
+        private Label orderNumberLbl;
         private Label label19;
         private Label label18;
         private Label label17;
-        private Label label16;
+        private Label totalOrderlbl;
         private Label label15;
-        private Button button2;
-        private Button button1;
-        private Label label14;
-        private Label label13;
+        private Label timeOrderlbl;
+        private Label dateOrderlbl;
         private Label label12;
-        private Label label11;
+        private Label statusOrderLbl;
         private Label label10;
-        private Label label9;
+        private Label listordernameLbl;
         private Label label8;
-        private Label label22;
-        private Label label21;
-        private Label label20;
+        private Label orderthisweekLbl;
+        private Label revenueLbl;
+        private Label orderTodaylbl;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
         private PictureBox pictureBox7;
+        private FlowLayoutPanel flowLayoutPanelOrder;
     }
 }

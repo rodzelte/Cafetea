@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using Cafetea.Database;
+using Cafetea.Database.FormService;
 
 namespace Cafetea.Forms
 {

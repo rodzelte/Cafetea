@@ -1,4 +1,5 @@
 ﻿using Cafetea.AdminControls;
+using Cafetea.Database.FormService;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -42,7 +43,7 @@ namespace Cafetea.Forms
             string username = usernameField.Text.Trim();
             string password = passwordField.Text.Trim();
 
-            string? role = Cafetea.Database.UserService.Login(username, password);
+            string? role = UserService.Login(username, password);
 
             if (role != null)
             { 

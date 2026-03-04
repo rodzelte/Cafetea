@@ -1,14 +1,19 @@
+using BasicExamples;
 using Cafetea.AdminControls;
+using System.Runtime.InteropServices;
 
 namespace Cafetea
 {
     public partial class Dashboard : Form
     {
 
+
         public Dashboard()
         {
             InitializeComponent();
+            this.Load += Dashboard_Load;
         }
+
 
 
         public void LoadAdminControl(UserControl control)
@@ -17,6 +22,8 @@ namespace Cafetea
             panelContainer.Controls.Clear();
             panelContainer.Controls.Add(control);
             control.BringToFront();
+
+
         }
 
         // DONT TOUCH THESE METHODS//
@@ -51,6 +58,13 @@ namespace Cafetea
             Application.Exit();
         }       // DONT TOUCH THESE METHODS//
 
+        private void Dashboard_Load(object? sender, EventArgs e)
+        {
+            Spline.Example(SplineChart);
+            Doughnut.Example(DoughnutChart);
+
+
+        }
 
 
     }

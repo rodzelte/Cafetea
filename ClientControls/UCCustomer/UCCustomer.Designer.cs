@@ -32,15 +32,6 @@
             label2 = new Label();
             label1 = new Label();
             panel1 = new Panel();
-            panel2 = new Panel();
-            panel5 = new Panel();
-            pictureBox2 = new PictureBox();
-            label15 = new Label();
-            label14 = new Label();
-            label13 = new Label();
-            label12 = new Label();
-            label11 = new Label();
-            label10 = new Label();
             panel3 = new Panel();
             label9 = new Label();
             label8 = new Label();
@@ -50,8 +41,17 @@
             label4 = new Label();
             label3 = new Label();
             panel4 = new Panel();
-            button1 = new Button();
-            textBox1 = new TextBox();
+            flpCustomer = new FlowLayoutPanel();
+            csPanel = new Panel();
+            actionCustomerBtn = new Button();
+            customerLastOrderlbl = new Label();
+            visitCslbl = new Label();
+            favoriteItemOrderlbl = new Label();
+            csEmailLbl = new Label();
+            csContactlbl = new Label();
+            csNamelbl = new Label();
+            cssearchBtn = new Button();
+            csSearchTextbox = new TextBox();
             pictureBox1 = new PictureBox();
             openFileDialog1 = new OpenFileDialog();
             openFileDialog2 = new OpenFileDialog();
@@ -59,10 +59,9 @@
             openFileDialog4 = new OpenFileDialog();
             openFileDialog5 = new OpenFileDialog();
             panel1.SuspendLayout();
-            panel2.SuspendLayout();
-            panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel3.SuspendLayout();
+            flpCustomer.SuspendLayout();
+            csPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -89,107 +88,15 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(panel2);
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(panel3);
+            panel1.Controls.Add(cssearchBtn);
+            panel1.Controls.Add(csSearchTextbox);
             panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(flpCustomer);
             panel1.Location = new Point(78, 169);
             panel1.Name = "panel1";
             panel1.Size = new Size(1085, 378);
             panel1.TabIndex = 6;
-            // 
-            // panel2
-            // 
-            panel2.AutoScroll = true;
-            panel2.Controls.Add(panel5);
-            panel2.Controls.Add(panel3);
-            panel2.Location = new Point(34, 107);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(990, 216);
-            panel2.TabIndex = 3;
-            // 
-            // panel5
-            // 
-            panel5.Controls.Add(pictureBox2);
-            panel5.Controls.Add(label15);
-            panel5.Controls.Add(label14);
-            panel5.Controls.Add(label13);
-            panel5.Controls.Add(label12);
-            panel5.Controls.Add(label11);
-            panel5.Controls.Add(label10);
-            panel5.Location = new Point(3, 64);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(981, 89);
-            panel5.TabIndex = 10;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(898, 22);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(37, 37);
-            pictureBox2.TabIndex = 15;
-            pictureBox2.TabStop = false;
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.ForeColor = Color.WhiteSmoke;
-            label15.Location = new Point(766, 34);
-            label15.Name = "label15";
-            label15.Size = new Size(94, 15);
-            label15.TabIndex = 14;
-            label15.Text = "Customer Name";
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.ForeColor = Color.WhiteSmoke;
-            label14.Location = new Point(650, 34);
-            label14.Name = "label14";
-            label14.Size = new Size(94, 15);
-            label14.TabIndex = 13;
-            label14.Text = "Customer Name";
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.ForeColor = Color.WhiteSmoke;
-            label13.Location = new Point(503, 34);
-            label13.Name = "label13";
-            label13.Size = new Size(94, 15);
-            label13.TabIndex = 12;
-            label13.Text = "Customer Name";
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.ForeColor = Color.WhiteSmoke;
-            label12.Location = new Point(374, 34);
-            label12.Name = "label12";
-            label12.Size = new Size(94, 15);
-            label12.TabIndex = 11;
-            label12.Text = "Customer Name";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.ForeColor = Color.WhiteSmoke;
-            label11.Location = new Point(225, 34);
-            label11.Name = "label11";
-            label11.Size = new Size(94, 15);
-            label11.TabIndex = 10;
-            label11.Text = "Customer Name";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.ForeColor = Color.WhiteSmoke;
-            label10.Location = new Point(44, 34);
-            label10.Name = "label10";
-            label10.Size = new Size(94, 15);
-            label10.TabIndex = 9;
-            label10.Text = "Customer Name";
             // 
             // panel3
             // 
@@ -201,16 +108,16 @@
             panel3.Controls.Add(label4);
             panel3.Controls.Add(label3);
             panel3.Controls.Add(panel4);
-            panel3.Location = new Point(3, 3);
+            panel3.Location = new Point(34, 105);
             panel3.Name = "panel3";
-            panel3.Size = new Size(984, 52);
+            panel3.Size = new Size(990, 52);
             panel3.TabIndex = 0;
             // 
             // label9
             // 
             label9.AutoSize = true;
             label9.ForeColor = Color.WhiteSmoke;
-            label9.Location = new Point(888, 17);
+            label9.Location = new Point(916, 17);
             label9.Name = "label9";
             label9.Size = new Size(47, 15);
             label9.TabIndex = 8;
@@ -220,7 +127,7 @@
             // 
             label8.AutoSize = true;
             label8.ForeColor = Color.WhiteSmoke;
-            label8.Location = new Point(766, 17);
+            label8.Location = new Point(787, 17);
             label8.Name = "label8";
             label8.Size = new Size(53, 15);
             label8.TabIndex = 7;
@@ -250,7 +157,7 @@
             // 
             label5.AutoSize = true;
             label5.ForeColor = Color.WhiteSmoke;
-            label5.Location = new Point(374, 17);
+            label5.Location = new Point(366, 17);
             label5.Name = "label5";
             label5.Size = new Size(36, 15);
             label5.TabIndex = 4;
@@ -260,7 +167,7 @@
             // 
             label4.AutoSize = true;
             label4.ForeColor = Color.WhiteSmoke;
-            label4.Location = new Point(246, 17);
+            label4.Location = new Point(207, 17);
             label4.Name = "label4";
             label4.Size = new Size(49, 15);
             label4.TabIndex = 3;
@@ -283,24 +190,121 @@
             panel4.Size = new Size(984, 131);
             panel4.TabIndex = 1;
             // 
-            // button1
+            // flpCustomer
             // 
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.WhiteSmoke;
-            button1.Location = new Point(445, 39);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 2;
-            button1.Text = "Search";
-            button1.UseVisualStyleBackColor = true;
+            flpCustomer.AutoScroll = true;
+            flpCustomer.Controls.Add(csPanel);
+            flpCustomer.FlowDirection = FlowDirection.TopDown;
+            flpCustomer.Location = new Point(34, 166);
+            flpCustomer.Name = "flpCustomer";
+            flpCustomer.Size = new Size(993, 258);
+            flpCustomer.TabIndex = 7;
+            flpCustomer.WrapContents = false;
             // 
-            // textBox1
+            // csPanel
             // 
-            textBox1.BackColor = Color.FromArgb(32, 44, 66);
-            textBox1.Location = new Point(98, 40);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(341, 23);
-            textBox1.TabIndex = 1;
+            csPanel.Controls.Add(actionCustomerBtn);
+            csPanel.Controls.Add(customerLastOrderlbl);
+            csPanel.Controls.Add(visitCslbl);
+            csPanel.Controls.Add(favoriteItemOrderlbl);
+            csPanel.Controls.Add(csEmailLbl);
+            csPanel.Controls.Add(csContactlbl);
+            csPanel.Controls.Add(csNamelbl);
+            csPanel.Location = new Point(3, 3);
+            csPanel.Name = "csPanel";
+            csPanel.Size = new Size(990, 89);
+            csPanel.TabIndex = 10;
+            // 
+            // actionCustomerBtn
+            // 
+            actionCustomerBtn.FlatStyle = FlatStyle.Flat;
+            actionCustomerBtn.ForeColor = Color.FromArgb(16, 22, 33);
+            actionCustomerBtn.Image = (Image)resources.GetObject("actionCustomerBtn.Image");
+            actionCustomerBtn.Location = new Point(906, 19);
+            actionCustomerBtn.Name = "actionCustomerBtn";
+            actionCustomerBtn.Size = new Size(57, 44);
+            actionCustomerBtn.TabIndex = 16;
+            actionCustomerBtn.UseVisualStyleBackColor = true;
+            // 
+            // customerLastOrderlbl
+            // 
+            customerLastOrderlbl.AutoSize = true;
+            customerLastOrderlbl.ForeColor = Color.WhiteSmoke;
+            customerLastOrderlbl.Location = new Point(773, 34);
+            customerLastOrderlbl.Name = "customerLastOrderlbl";
+            customerLastOrderlbl.Size = new Size(94, 15);
+            customerLastOrderlbl.TabIndex = 14;
+            customerLastOrderlbl.Text = "Customer Name";
+            // 
+            // visitCslbl
+            // 
+            visitCslbl.AutoSize = true;
+            visitCslbl.ForeColor = Color.WhiteSmoke;
+            visitCslbl.Location = new Point(632, 34);
+            visitCslbl.Name = "visitCslbl";
+            visitCslbl.Size = new Size(94, 15);
+            visitCslbl.TabIndex = 13;
+            visitCslbl.Text = "Customer Name";
+            // 
+            // favoriteItemOrderlbl
+            // 
+            favoriteItemOrderlbl.AutoSize = true;
+            favoriteItemOrderlbl.ForeColor = Color.WhiteSmoke;
+            favoriteItemOrderlbl.Location = new Point(485, 34);
+            favoriteItemOrderlbl.Name = "favoriteItemOrderlbl";
+            favoriteItemOrderlbl.Size = new Size(94, 15);
+            favoriteItemOrderlbl.TabIndex = 12;
+            favoriteItemOrderlbl.Text = "Customer Name";
+            // 
+            // csEmailLbl
+            // 
+            csEmailLbl.AutoSize = true;
+            csEmailLbl.ForeColor = Color.WhiteSmoke;
+            csEmailLbl.Location = new Point(336, 34);
+            csEmailLbl.Name = "csEmailLbl";
+            csEmailLbl.Size = new Size(94, 15);
+            csEmailLbl.TabIndex = 11;
+            csEmailLbl.Text = "Customer Name";
+            // 
+            // csContactlbl
+            // 
+            csContactlbl.AutoSize = true;
+            csContactlbl.ForeColor = Color.WhiteSmoke;
+            csContactlbl.Location = new Point(190, 34);
+            csContactlbl.Name = "csContactlbl";
+            csContactlbl.Size = new Size(94, 15);
+            csContactlbl.TabIndex = 10;
+            csContactlbl.Text = "Customer Name";
+            // 
+            // csNamelbl
+            // 
+            csNamelbl.AutoSize = true;
+            csNamelbl.ForeColor = Color.WhiteSmoke;
+            csNamelbl.Location = new Point(44, 34);
+            csNamelbl.Name = "csNamelbl";
+            csNamelbl.Size = new Size(94, 15);
+            csNamelbl.TabIndex = 9;
+            csNamelbl.Text = "Customer Name";
+            // 
+            // cssearchBtn
+            // 
+            cssearchBtn.FlatStyle = FlatStyle.Flat;
+            cssearchBtn.ForeColor = Color.WhiteSmoke;
+            cssearchBtn.Location = new Point(445, 39);
+            cssearchBtn.Name = "cssearchBtn";
+            cssearchBtn.Size = new Size(75, 23);
+            cssearchBtn.TabIndex = 2;
+            cssearchBtn.Text = "Search";
+            cssearchBtn.UseVisualStyleBackColor = true;
+            cssearchBtn.Click += cssearchBtn_Click;
+            // 
+            // csSearchTextbox
+            // 
+            csSearchTextbox.BackColor = Color.FromArgb(32, 44, 66);
+            csSearchTextbox.Location = new Point(98, 40);
+            csSearchTextbox.Name = "csSearchTextbox";
+            csSearchTextbox.Size = new Size(341, 23);
+            csSearchTextbox.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -337,19 +341,18 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(16, 22, 33);
+            Controls.Add(panel1);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(panel1);
             Name = "UCCustomer";
             Size = new Size(1271, 635);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            flpCustomer.ResumeLayout(false);
+            csPanel.ResumeLayout(false);
+            csPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -360,19 +363,17 @@
         private Label label1;
         private Panel panel1;
         private PictureBox pictureBox1;
-        private Panel panel2;
-        private Button button1;
-        private TextBox textBox1;
+        private Button cssearchBtn;
+        private TextBox csSearchTextbox;
         private Panel panel3;
         private Panel panel4;
-        private Panel panel5;
-        private PictureBox pictureBox2;
-        private Label label15;
-        private Label label14;
-        private Label label13;
-        private Label label12;
-        private Label label11;
-        private Label label10;
+        private Panel csPanel;
+        private Label customerLastOrderlbl;
+        private Label visitCslbl;
+        private Label favoriteItemOrderlbl;
+        private Label csEmailLbl;
+        private Label csContactlbl;
+        private Label csNamelbl;
         private Label label9;
         private Label label8;
         private Label label7;
@@ -385,5 +386,7 @@
         private OpenFileDialog openFileDialog3;
         private OpenFileDialog openFileDialog4;
         private OpenFileDialog openFileDialog5;
+        private FlowLayoutPanel flpCustomer;
+        private Button actionCustomerBtn;
     }
 }

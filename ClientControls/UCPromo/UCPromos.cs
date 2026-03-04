@@ -17,6 +17,7 @@ namespace Cafetea.AdminControls
         {
             InitializeComponent();
             framePromo.Visible = false;
+
             LoadPromos();
         }
 
@@ -60,6 +61,10 @@ namespace Cafetea.AdminControls
 
                 // Set the promo card color
                 promoCard.BackColor = Color.FromArgb(16, 22, 33);
+
+
+            
+
 
                 // store promo id for buttons
                 promoCard.Tag = promo.Id;

@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using System.IO;
 
-namespace Cafetea.Database
+namespace Cafetea.Database.Connection
 {
     public static class Database
     {
