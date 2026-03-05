@@ -1,4 +1,6 @@
+using Cafetea.AdminControls;
 using Cafetea.Forms;
+using Cafetea.Simulator;
 using Cafetea.StaffControls.Dashboard;
 using Cafetea.StaffControls.UCOrder;
 
@@ -18,7 +20,9 @@ namespace Cafetea
                 {
                     conn.Open();
                     MessageBox.Show("Successfully connected to the database!");
-                    Application.Run(new SuperAdminControls.ActivationKey());
+                    Application.Run(new Dashboard());
+                    //Application.Run(new SuperAdminControls.ActivationKey());
+                    Simulate.RunTimeSimulation(numCustomers: 10, daysBack: 30);
                 }
             }
             catch (Exception ex)

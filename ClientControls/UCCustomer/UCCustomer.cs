@@ -48,7 +48,11 @@ namespace Cafetea.AdminControls
             if (nameLbl != null) nameLbl.Text = cs.Name;
             if (contactLbl != null) contactLbl.Text = cs.Contact;
             if (emailLbl != null) emailLbl.Text = cs.Email;
-            if (favoriteLbl != null) favoriteLbl.Text = $"{cs.FavoriteOrder}";
+            if (favoriteLbl != null)
+            {
+                string favorite = cs.FavoriteOrder ?? "";
+                favoriteLbl.Text = favorite.Split(' ').FirstOrDefault() ?? "-";
+            }
             if (visitsLbl != null) visitsLbl.Text = $"{cs.VisitsCount}";
             if (lastOrderLbl != null) lastOrderLbl.Text = $"{(cs.LastOrderDate.HasValue ? cs.LastOrderDate.Value.ToString("MMM dd, yyyy") : "-")}";
 

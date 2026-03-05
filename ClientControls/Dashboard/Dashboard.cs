@@ -1,32 +1,52 @@
 using BasicExamples;
 using Cafetea.AdminControls;
-using System;
-using System.Windows.Forms;
 
 namespace Cafetea
+
+
 {
     public partial class Dashboard : Form
     {
-        // Panel to hold the dashboard charts (nullable for C# 10)
+        // Panel to hold the dashboard charts
         private Panel? dashboardPanel;
+
+        // Notification manager
 
 
         public Dashboard()
         {
             InitializeComponent();
 
-            // Initialize dashboard panel and charts
+
+
+
+            // 1️⃣ Initialize dashboard panel and add Guna charts
             InitializeDashboardPanel();
 
-            // Show dashboard by default
+            // 2️⃣ Show dashboard
             ShowDashboard();
+
+            // 3️⃣ Load chart data
+            LoadCharts();
+
+            // 4️⃣ Initialize notification manager
+
+            // Initialize notifications only after form fully shown
+
         }
+
+
+
+
+
 
         #region Panel Initialization
         private void InitializeDashboardPanel()
         {
-            dashboardPanel = new Panel();
-            dashboardPanel.Dock = DockStyle.Fill;
+            dashboardPanel = new Panel
+            {
+                Dock = DockStyle.Fill
+            };
 
             // Add Guna charts to the panel
             dashboardPanel.Controls.Add(revenueChart);
@@ -34,6 +54,7 @@ namespace Cafetea
             dashboardPanel.Controls.Add(gunaCustomerChart);
             dashboardPanel.Controls.Add(gunaReviewChart);
 
+            // Add the panel to the container
             panelContainer.Controls.Add(dashboardPanel);
         }
         #endregion
@@ -57,13 +78,18 @@ namespace Cafetea
 
         private void ShowDashboard()
         {
-            if (dashboardPanel == null) return; // safety check
+            if (dashboardPanel == null) return;
 
+            // Clear container and add dashboard panel
             panelContainer.Controls.Clear();
             panelContainer.Controls.Add(dashboardPanel);
             dashboardPanel.BringToFront();
 
-            LoadCharts(); // refresh chart data
+            // Refresh panel to force Guna charts to render
+            dashboardPanel.Refresh();
+
+            // Load chart data
+            LoadCharts();
         }
         #endregion
 
@@ -86,9 +112,11 @@ namespace Cafetea
         private void promoBtn_Click(object sender, EventArgs e)
         {
             LoadAdminControl(new UCPromos());
+
         }
 
-        private void exitBtn_Click_1(object sender, EventArgs e)
+
+        private void exitBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -103,5 +131,25 @@ namespace Cafetea
             ReviewSplineChart.Example(gunaReviewChart);
         }
         #endregion
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+
+            // 1️⃣ Initialize dashboard panel and add Guna charts
+            InitializeDashboardPanel();
+
+            // 2️⃣ Show dashboard
+            ShowDashboard();
+
+            // 3️⃣ Load chart data
+            LoadCharts();
+
+
+
+
+
+        }
+
     }
+
 }

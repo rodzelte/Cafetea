@@ -102,18 +102,20 @@
             customerBtn = new Button();
             dashboardBtn = new Button();
             panelContainer = new Guna.UI2.WinForms.Guna2Panel();
-            label4 = new Label();
-            revenueChart = new Guna.Charts.WinForms.GunaChart();
+            label1 = new Label();
             label3 = new Label();
             label2 = new Label();
-            label1 = new Label();
+            label4 = new Label();
+            revenueChart = new Guna.Charts.WinForms.GunaChart();
             gunaReviewChart = new Guna.Charts.WinForms.GunaChart();
             MonthlyDoughnutChart = new Guna.Charts.WinForms.GunaChart();
             gunaCustomerChart = new Guna.Charts.WinForms.GunaChart();
+            flowLayout = new FlowLayoutPanel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel.SuspendLayout();
             panelContainer.SuspendLayout();
+            flowLayout.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -152,7 +154,7 @@
             exitBtn.Text = "    Exit";
             exitBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
             exitBtn.UseVisualStyleBackColor = true;
-            exitBtn.Click += exitBtn_Click_1;
+            exitBtn.Click += exitBtn_Click;
             // 
             // pictureBox1
             // 
@@ -261,26 +263,56 @@
             // panelContainer
             // 
             panelContainer.AutoScroll = true;
-            panelContainer.Controls.Add(label4);
-            panelContainer.Controls.Add(revenueChart);
+            panelContainer.Controls.Add(label1);
             panelContainer.Controls.Add(label3);
             panelContainer.Controls.Add(label2);
-            panelContainer.Controls.Add(label1);
+            panelContainer.Controls.Add(label4);
+            panelContainer.Controls.Add(revenueChart);
             panelContainer.Controls.Add(gunaReviewChart);
             panelContainer.Controls.Add(MonthlyDoughnutChart);
             panelContainer.Controls.Add(gunaCustomerChart);
             panelContainer.CustomizableEdges = customizableEdges1;
-            panelContainer.Location = new Point(0, 203);
+            panelContainer.Location = new Point(3, 3);
             panelContainer.Name = "panelContainer";
             panelContainer.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            panelContainer.Size = new Size(1447, 573);
+            panelContainer.Size = new Size(1447, 975);
             panelContainer.TabIndex = 3;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.ForeColor = Color.WhiteSmoke;
+            label1.Location = new Point(1153, 384);
+            label1.Name = "label1";
+            label1.Size = new Size(57, 17);
+            label1.TabIndex = 3;
+            label1.Text = "Reviews";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.ForeColor = Color.WhiteSmoke;
+            label3.Location = new Point(1153, 90);
+            label3.Name = "label3";
+            label3.Size = new Size(97, 17);
+            label3.TabIndex = 5;
+            label3.Text = "Monthly Orders";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.ForeColor = Color.WhiteSmoke;
+            label2.Location = new Point(552, 405);
+            label2.Name = "label2";
+            label2.Size = new Size(70, 17);
+            label2.TabIndex = 4;
+            label2.Text = "Customers";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.ForeColor = Color.WhiteSmoke;
-            label4.Location = new Point(474, 90);
+            label4.Location = new Point(552, 90);
             label4.Name = "label4";
             label4.Size = new Size(61, 17);
             label4.TabIndex = 7;
@@ -291,9 +323,9 @@
             revenueChart.BackColor = Color.FromArgb(16, 22, 33);
             chartFont1.FontName = "Arial";
             revenueChart.Legend.LabelFont = chartFont1;
-            revenueChart.Location = new Point(142, 72);
+            revenueChart.Location = new Point(69, 72);
             revenueChart.Name = "revenueChart";
-            revenueChart.Size = new Size(305, 216);
+            revenueChart.Size = new Size(471, 216);
             revenueChart.TabIndex = 6;
             chartFont2.FontName = "Arial";
             chartFont2.Size = 12;
@@ -321,44 +353,14 @@
             tick3.Font = chartFont8;
             revenueChart.ZAxes.Ticks = tick3;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.ForeColor = Color.WhiteSmoke;
-            label3.Location = new Point(1055, 90);
-            label3.Name = "label3";
-            label3.Size = new Size(97, 17);
-            label3.TabIndex = 5;
-            label3.Text = "Monthly Orders";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.ForeColor = Color.WhiteSmoke;
-            label2.Location = new Point(474, 422);
-            label2.Name = "label2";
-            label2.Size = new Size(70, 17);
-            label2.TabIndex = 4;
-            label2.Text = "Customers";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.ForeColor = Color.WhiteSmoke;
-            label1.Location = new Point(1055, 439);
-            label1.Name = "label1";
-            label1.Size = new Size(57, 17);
-            label1.TabIndex = 3;
-            label1.Text = "Reviews";
-            // 
             // gunaReviewChart
             // 
             gunaReviewChart.BackColor = Color.FromArgb(16, 22, 33);
             chartFont9.FontName = "Arial";
             gunaReviewChart.Legend.LabelFont = chartFont9;
-            gunaReviewChart.Location = new Point(744, 422);
+            gunaReviewChart.Location = new Point(698, 384);
             gunaReviewChart.Name = "gunaReviewChart";
-            gunaReviewChart.Size = new Size(305, 216);
+            gunaReviewChart.Size = new Size(435, 216);
             gunaReviewChart.TabIndex = 0;
             chartFont10.FontName = "Arial";
             chartFont10.Size = 12;
@@ -391,9 +393,9 @@
             MonthlyDoughnutChart.BackColor = Color.FromArgb(16, 22, 33);
             chartFont17.FontName = "Arial";
             MonthlyDoughnutChart.Legend.LabelFont = chartFont17;
-            MonthlyDoughnutChart.Location = new Point(744, 72);
+            MonthlyDoughnutChart.Location = new Point(698, 72);
             MonthlyDoughnutChart.Name = "MonthlyDoughnutChart";
-            MonthlyDoughnutChart.Size = new Size(305, 216);
+            MonthlyDoughnutChart.Size = new Size(435, 216);
             MonthlyDoughnutChart.TabIndex = 1;
             chartFont18.FontName = "Arial";
             chartFont18.Size = 12;
@@ -426,9 +428,9 @@
             gunaCustomerChart.BackColor = Color.FromArgb(16, 22, 33);
             chartFont25.FontName = "Arial";
             gunaCustomerChart.Legend.LabelFont = chartFont25;
-            gunaCustomerChart.Location = new Point(142, 404);
+            gunaCustomerChart.Location = new Point(69, 384);
             gunaCustomerChart.Name = "gunaCustomerChart";
-            gunaCustomerChart.Size = new Size(305, 216);
+            gunaCustomerChart.Size = new Size(471, 216);
             gunaCustomerChart.TabIndex = 2;
             chartFont26.FontName = "Arial";
             chartFont26.Size = 12;
@@ -456,25 +458,37 @@
             tick12.Font = chartFont32;
             gunaCustomerChart.ZAxes.Ticks = tick12;
             // 
+            // flowLayout
+            // 
+            flowLayout.AutoScroll = true;
+            flowLayout.Controls.Add(panelContainer);
+            flowLayout.Location = new Point(0, 203);
+            flowLayout.Name = "flowLayout";
+            flowLayout.Size = new Size(1447, 688);
+            flowLayout.TabIndex = 8;
+            flowLayout.WrapContents = false;
+            // 
             // Dashboard
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.FromArgb(16, 22, 27);
             ClientSize = new Size(1378, 744);
-            Controls.Add(panelContainer);
             Controls.Add(panel);
             Controls.Add(panel1);
+            Controls.Add(flowLayout);
             Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Dashboard";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            Load += Dashboard_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel.ResumeLayout(false);
             panelContainer.ResumeLayout(false);
             panelContainer.PerformLayout();
+            flowLayout.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -499,5 +513,6 @@
         private Label label3;
         private Label label2;
         private Label label1;
+        private FlowLayoutPanel flowLayout;
     }
 }

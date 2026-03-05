@@ -41,6 +41,9 @@
             label4 = new Label();
             label3 = new Label();
             panel4 = new Panel();
+            cssearchBtn = new Button();
+            csSearchTextbox = new TextBox();
+            pictureBox1 = new PictureBox();
             flpCustomer = new FlowLayoutPanel();
             csPanel = new Panel();
             actionCustomerBtn = new Button();
@@ -50,9 +53,6 @@
             csEmailLbl = new Label();
             csContactlbl = new Label();
             csNamelbl = new Label();
-            cssearchBtn = new Button();
-            csSearchTextbox = new TextBox();
-            pictureBox1 = new PictureBox();
             openFileDialog1 = new OpenFileDialog();
             openFileDialog2 = new OpenFileDialog();
             openFileDialog3 = new OpenFileDialog();
@@ -60,9 +60,9 @@
             openFileDialog5 = new OpenFileDialog();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             flpCustomer.SuspendLayout();
             csPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label2
@@ -190,6 +190,36 @@
             panel4.Size = new Size(984, 131);
             panel4.TabIndex = 1;
             // 
+            // cssearchBtn
+            // 
+            cssearchBtn.FlatStyle = FlatStyle.Flat;
+            cssearchBtn.ForeColor = Color.WhiteSmoke;
+            cssearchBtn.Location = new Point(445, 39);
+            cssearchBtn.Name = "cssearchBtn";
+            cssearchBtn.Size = new Size(75, 23);
+            cssearchBtn.TabIndex = 2;
+            cssearchBtn.Text = "Search";
+            cssearchBtn.UseVisualStyleBackColor = true;
+            cssearchBtn.Click += cssearchBtn_Click;
+            // 
+            // csSearchTextbox
+            // 
+            csSearchTextbox.BackColor = Color.FromArgb(32, 44, 66);
+            csSearchTextbox.Location = new Point(98, 40);
+            csSearchTextbox.Name = "csSearchTextbox";
+            csSearchTextbox.Size = new Size(341, 23);
+            csSearchTextbox.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.ErrorImage = null;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(34, 31);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(44, 42);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
             // flpCustomer
             // 
             flpCustomer.AutoScroll = true;
@@ -197,7 +227,7 @@
             flpCustomer.FlowDirection = FlowDirection.TopDown;
             flpCustomer.Location = new Point(34, 166);
             flpCustomer.Name = "flpCustomer";
-            flpCustomer.Size = new Size(993, 258);
+            flpCustomer.Size = new Size(993, 411);
             flpCustomer.TabIndex = 7;
             flpCustomer.WrapContents = false;
             // 
@@ -286,36 +316,6 @@
             csNamelbl.TabIndex = 9;
             csNamelbl.Text = "Customer Name";
             // 
-            // cssearchBtn
-            // 
-            cssearchBtn.FlatStyle = FlatStyle.Flat;
-            cssearchBtn.ForeColor = Color.WhiteSmoke;
-            cssearchBtn.Location = new Point(445, 39);
-            cssearchBtn.Name = "cssearchBtn";
-            cssearchBtn.Size = new Size(75, 23);
-            cssearchBtn.TabIndex = 2;
-            cssearchBtn.Text = "Search";
-            cssearchBtn.UseVisualStyleBackColor = true;
-            cssearchBtn.Click += cssearchBtn_Click;
-            // 
-            // csSearchTextbox
-            // 
-            csSearchTextbox.BackColor = Color.FromArgb(32, 44, 66);
-            csSearchTextbox.Location = new Point(98, 40);
-            csSearchTextbox.Name = "csSearchTextbox";
-            csSearchTextbox.Size = new Size(341, 23);
-            csSearchTextbox.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.ErrorImage = null;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(34, 31);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(44, 42);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            // 
             // openFileDialog1
             // 
             openFileDialog1.FileName = "openFileDialog1";
@@ -350,10 +350,10 @@
             panel1.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             flpCustomer.ResumeLayout(false);
             csPanel.ResumeLayout(false);
             csPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }

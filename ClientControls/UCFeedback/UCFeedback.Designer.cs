@@ -302,7 +302,7 @@
             flowlayoutpanelFeedback.FlowDirection = FlowDirection.TopDown;
             flowlayoutpanelFeedback.Location = new Point(98, 332);
             flowlayoutpanelFeedback.Name = "flowlayoutpanelFeedback";
-            flowlayoutpanelFeedback.Size = new Size(963, 169);
+            flowlayoutpanelFeedback.Size = new Size(963, 362);
             flowlayoutpanelFeedback.TabIndex = 16;
             flowlayoutpanelFeedback.WrapContents = false;
             // 
@@ -317,7 +317,7 @@
             feedbackPanel.Controls.Add(customerNameFeedbacklbl);
             feedbackPanel.Location = new Point(3, 3);
             feedbackPanel.Name = "feedbackPanel";
-            feedbackPanel.Size = new Size(960, 141);
+            feedbackPanel.Size = new Size(960, 352);
             feedbackPanel.TabIndex = 0;
             // 
             // ratingLbl

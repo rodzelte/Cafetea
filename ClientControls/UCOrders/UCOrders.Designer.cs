@@ -444,7 +444,7 @@
             flowLayoutPanelOrder.Controls.Add(orderPanel);
             flowLayoutPanelOrder.Location = new Point(145, 347);
             flowLayoutPanelOrder.Name = "flowLayoutPanelOrder";
-            flowLayoutPanelOrder.Size = new Size(963, 104);
+            flowLayoutPanelOrder.Size = new Size(963, 287);
             flowLayoutPanelOrder.TabIndex = 11;
             flowLayoutPanelOrder.WrapContents = false;
             // 

@@ -1,4 +1,5 @@
 ﻿using Cafetea.AdminControls;
+
 using Cafetea.StaffControls.UCOrder;
 using Cafetea.StaffControls.UCOrderProgress;
 using System;
@@ -8,10 +9,14 @@ namespace Cafetea.StaffControls.Dashboard
 {
     public partial class StaffDashboard : Form
     {
+
+   
         public StaffDashboard()
         {
             InitializeComponent();
             ShowDashboard();
+            // Initialize notifications
+          
         }
 
         #region Load Controls
