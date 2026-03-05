@@ -18,7 +18,7 @@ namespace Cafetea
                 {
                     conn.Open();
                     MessageBox.Show("Successfully connected to the database!");
-                    Application.Run(new StaffDashboard());
+                    Application.Run(new SuperAdminControls.ActivationKey());
                 }
             }
             catch (Exception ex)

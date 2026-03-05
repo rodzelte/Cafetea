@@ -60,21 +60,36 @@ namespace Cafetea.Database.Client.OrderService
 
             while (reader.Read())
             {
-                orders.Add(new Order
+                var order = new Order
                 {
                     Id = reader.GetInt32(reader.GetOrdinal("Id")),
                     CustomerId = reader["CustomerId"] != DBNull.Value ? (int?)reader["CustomerId"] : null,
-                    Name = reader["Name"] != DBNull.Value ? reader.GetString(reader.GetOrdinal("Name")) : string.Empty,
-                    NameOfPurchaser = reader["CustomerName"] != DBNull.Value
-                        ? reader.GetString(reader.GetOrdinal("CustomerName"))
-                        : "Walk-In", // default for walk-ins
-                    NameOfOrderPurchase = reader["NameOfOrderPurchase"] != DBNull.Value ? reader.GetString(reader.GetOrdinal("NameOfOrderPurchase")) : string.Empty,
-                    Status = reader["Status"] != DBNull.Value ? reader.GetString(reader.GetOrdinal("Status")) : string.Empty,
-                    OrderDate = reader["OrderDate"] != DBNull.Value ? reader.GetDateTime(reader.GetOrdinal("OrderDate")) : DateTime.MinValue,
-                    Total = reader["Total"] != DBNull.Value ? reader.GetDecimal(reader.GetOrdinal("Total")) : 0m
-                });
-            }
+                    Name = !reader.IsDBNull(reader.GetOrdinal("Name"))
+                           ? Convert.ToString(reader["Name"])!
+                           : string.Empty,
+                    NameOfPurchaser = !reader.IsDBNull(reader.GetOrdinal("NameOfPurchaser"))
+                                      && !string.IsNullOrWhiteSpace(Convert.ToString(reader["NameOfPurchaser"]))
+                        ? Convert.ToString(reader["NameOfPurchaser"])!
+                        : (!reader.IsDBNull(reader.GetOrdinal("CustomerName"))
+                           && !string.IsNullOrWhiteSpace(Convert.ToString(reader["CustomerName"]))
+                            ? Convert.ToString(reader["CustomerName"])!
+                            : "Walk-In"),
+                    NameOfOrderPurchase = !reader.IsDBNull(reader.GetOrdinal("NameOfOrderPurchase"))
+                                          ? Convert.ToString(reader["NameOfOrderPurchase"])!
+                                          : string.Empty,
+                    Status = !reader.IsDBNull(reader.GetOrdinal("Status"))
+                             ? Convert.ToString(reader["Status"])!
+                             : string.Empty,
+                    OrderDate = !reader.IsDBNull(reader.GetOrdinal("OrderDate"))
+                                ? reader.GetDateTime(reader.GetOrdinal("OrderDate"))
+                                : DateTime.MinValue,
+                    Total = !reader.IsDBNull(reader.GetOrdinal("Total"))
+                            ? reader.GetDecimal(reader.GetOrdinal("Total"))
+                            : 0m
+                };
 
+                orders.Add(order);
+            }
             return orders;
         }
 

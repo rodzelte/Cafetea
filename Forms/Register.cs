@@ -14,7 +14,6 @@ namespace Cafetea.Forms
             roleDropdown.Items.Clear();
             roleDropdown.Items.Add("Client");
             roleDropdown.Items.Add("Staff");
-            roleDropdown.Items.Add("SuperAdmin");
             roleDropdown.SelectedIndex = 0; // default selection
         }
 

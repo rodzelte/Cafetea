@@ -1,5 +1,7 @@
 ﻿using Cafetea.AdminControls;
 using Cafetea.Database.Client.FormService;
+using Cafetea.StaffControls.Dashboard;
+using Cafetea.StaffControls.UCOrder;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -57,10 +59,10 @@ namespace Cafetea.Forms
                         dashboard.LoadAdminControl(new UCDashboard()); // example for SuperAdmin
                         break;
                     case "Staff":
-                        dashboard.LoadAdminControl(new UCCustomer()); // example for Staff
+                        dashboard.LoadAdminControl(new UCStaffOrder()); // example for Staff
                         break;
                     case "Client":
-                        dashboard.LoadAdminControl(new UCOrders()); // example for Client
+                        dashboard.LoadAdminControl(new UCDashboard()); // example for Client
                         break;
                 }
 

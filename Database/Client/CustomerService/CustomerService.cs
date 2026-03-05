@@ -16,13 +16,9 @@ namespace Cafetea.Database.Client.CustomerService
             {
                 conn.Open();
                 string query = @"
-                    SELECT c.Id, c.CustomerName, c.Contact, c.Email, 
-                           ISNULL(c.VisitsCount, 0) AS VisitsCount,
-                           c.LastVisitDate,
-                           o.NameOfOrderPurchase
-                    FROM Customers c
-                    LEFT JOIN Orders o ON c.Id = o.CustomerId
-                    ORDER BY c.CustomerName";
+            SELECT Id, CustomerName, Contact, Email, VisitsCount, LastVisitDate
+            FROM Customers
+            ORDER BY CustomerName";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 using (SqlDataReader reader = cmd.ExecuteReader())
@@ -32,27 +28,31 @@ namespace Cafetea.Database.Client.CustomerService
                         var customer = new CustomerModel
                         {
                             Id = reader.GetInt32(reader.GetOrdinal("Id")),
-                            Name = reader.GetString(reader.GetOrdinal("CustomerName")),
-                            Contact = reader.IsDBNull(reader.GetOrdinal("Contact")) ? "" : reader.GetString(reader.GetOrdinal("Contact")),
-                            Email = reader.IsDBNull(reader.GetOrdinal("Email")) ? "" : reader.GetString(reader.GetOrdinal("Email")),
-                            VisitsCount = reader.GetInt32(reader.GetOrdinal("VisitsCount")),
-                            LastOrderDate = reader.IsDBNull(reader.GetOrdinal("LastVisitDate")) ? (DateTime?)null : reader.GetDateTime(reader.GetOrdinal("LastVisitDate")),
+                            Name = !reader.IsDBNull(reader.GetOrdinal("CustomerName"))
+                                   ? Convert.ToString(reader["CustomerName"])!
+                                   : string.Empty,
+                            Contact = !reader.IsDBNull(reader.GetOrdinal("Contact"))
+                                      ? Convert.ToString(reader["Contact"])!
+                                      : string.Empty,
+                            Email = !reader.IsDBNull(reader.GetOrdinal("Email"))
+                                    ? Convert.ToString(reader["Email"])!
+                                    : string.Empty,
+                            VisitsCount = reader["VisitsCount"] != DBNull.Value ? Convert.ToInt32(reader["VisitsCount"]) : 0,
+                            LastOrderDate = !reader.IsDBNull(reader.GetOrdinal("LastVisitDate"))
+                                            ? (DateTime?)reader.GetDateTime(reader.GetOrdinal("LastVisitDate"))
+                                            : null
                         };
+
+                        // Get favorite order per customer (separate query)
+                        customer.FavoriteOrder = GetFavoriteOrder(customer.Id);
 
                         customers.Add(customer);
                     }
                 }
             }
 
-            // Calculate favorite orders separately
-            foreach (var customer in customers)
-            {
-                customer.FavoriteOrder = GetFavoriteOrder(customer.Id);
-            }
-
             return customers;
         }
-
         private string GetFavoriteOrder(int customerId)
         {
             using (SqlConnection conn = Connection.Database.GetConnection())

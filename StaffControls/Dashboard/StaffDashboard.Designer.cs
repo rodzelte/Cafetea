@@ -28,18 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            UCPanel = new Guna.UI2.WinForms.Guna2Panel();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaffDashboard));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            UCStaffPanel = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            exitBtn = new Button();
             label2 = new Label();
             guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             OrderBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -48,24 +50,41 @@
             guna2Panel3.SuspendLayout();
             SuspendLayout();
             // 
-            // UCPanel
+            // UCStaffPanel
             // 
-            UCPanel.CustomizableEdges = customizableEdges11;
-            UCPanel.Location = new Point(0, 208);
-            UCPanel.Name = "UCPanel";
-            UCPanel.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            UCPanel.Size = new Size(869, 495);
-            UCPanel.TabIndex = 0;
+            UCStaffPanel.CustomizableEdges = customizableEdges1;
+            UCStaffPanel.Location = new Point(0, 208);
+            UCStaffPanel.Name = "UCStaffPanel";
+            UCStaffPanel.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            UCStaffPanel.Size = new Size(869, 495);
+            UCStaffPanel.TabIndex = 0;
             // 
             // guna2Panel2
             // 
+            guna2Panel2.Controls.Add(exitBtn);
             guna2Panel2.Controls.Add(label2);
-            guna2Panel2.CustomizableEdges = customizableEdges13;
+            guna2Panel2.CustomizableEdges = customizableEdges3;
             guna2Panel2.Location = new Point(0, 1);
             guna2Panel2.Name = "guna2Panel2";
-            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Panel2.Size = new Size(869, 71);
             guna2Panel2.TabIndex = 1;
+            // 
+            // exitBtn
+            // 
+            exitBtn.FlatAppearance.BorderSize = 0;
+            exitBtn.FlatStyle = FlatStyle.Flat;
+            exitBtn.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            exitBtn.ForeColor = Color.WhiteSmoke;
+            exitBtn.Image = (Image)resources.GetObject("exitBtn.Image");
+            exitBtn.Location = new Point(768, 11);
+            exitBtn.Name = "exitBtn";
+            exitBtn.Size = new Size(91, 48);
+            exitBtn.TabIndex = 5;
+            exitBtn.Text = "    Exit";
+            exitBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
+            exitBtn.UseVisualStyleBackColor = true;
+            exitBtn.Click += exitBtn_Click;
             // 
             // label2
             // 
@@ -82,16 +101,16 @@
             // 
             guna2Panel3.Controls.Add(OrderBtn);
             guna2Panel3.Controls.Add(OrderProgressBtn);
-            guna2Panel3.CustomizableEdges = customizableEdges19;
+            guna2Panel3.CustomizableEdges = customizableEdges9;
             guna2Panel3.Location = new Point(0, 100);
             guna2Panel3.Name = "guna2Panel3";
-            guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges10;
             guna2Panel3.Size = new Size(869, 86);
             guna2Panel3.TabIndex = 2;
             // 
             // OrderBtn
             // 
-            OrderBtn.CustomizableEdges = customizableEdges15;
+            OrderBtn.CustomizableEdges = customizableEdges5;
             OrderBtn.DisabledState.BorderColor = Color.DarkGray;
             OrderBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             OrderBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -100,14 +119,15 @@
             OrderBtn.ForeColor = Color.White;
             OrderBtn.Location = new Point(283, 22);
             OrderBtn.Name = "OrderBtn";
-            OrderBtn.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            OrderBtn.ShadowDecoration.CustomizableEdges = customizableEdges6;
             OrderBtn.Size = new Size(180, 45);
             OrderBtn.TabIndex = 1;
             OrderBtn.Text = "Make an Order";
+            OrderBtn.Click += OrderBtn_Click;
             // 
             // OrderProgressBtn
             // 
-            OrderProgressBtn.CustomizableEdges = customizableEdges17;
+            OrderProgressBtn.CustomizableEdges = customizableEdges7;
             OrderProgressBtn.DisabledState.BorderColor = Color.DarkGray;
             OrderProgressBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             OrderProgressBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -116,10 +136,11 @@
             OrderProgressBtn.ForeColor = Color.White;
             OrderProgressBtn.Location = new Point(35, 22);
             OrderProgressBtn.Name = "OrderProgressBtn";
-            OrderProgressBtn.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            OrderProgressBtn.ShadowDecoration.CustomizableEdges = customizableEdges8;
             OrderProgressBtn.Size = new Size(180, 45);
             OrderProgressBtn.TabIndex = 0;
             OrderProgressBtn.Text = "Order Progress";
+            OrderProgressBtn.Click += OrderProgressBtn_Click;
             // 
             // StaffDashboard
             // 
@@ -129,7 +150,7 @@
             ClientSize = new Size(871, 706);
             Controls.Add(guna2Panel3);
             Controls.Add(guna2Panel2);
-            Controls.Add(UCPanel);
+            Controls.Add(UCStaffPanel);
             FormBorderStyle = FormBorderStyle.None;
             Name = "StaffDashboard";
             StartPosition = FormStartPosition.CenterScreen;
@@ -142,11 +163,12 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Panel UCPanel;
+        private Guna.UI2.WinForms.Guna2Panel UCStaffPanel;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Label label2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2Button OrderBtn;
         private Guna.UI2.WinForms.Guna2Button OrderProgressBtn;
+        private Button exitBtn;
     }
 }
