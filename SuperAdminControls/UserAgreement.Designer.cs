@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             acceptBtn = new Guna.UI2.WinForms.Guna2Button();
             declineBtn = new Guna.UI2.WinForms.Guna2Button();
             panel1 = new Panel();
@@ -41,7 +41,7 @@
             // 
             // acceptBtn
             // 
-            acceptBtn.CustomizableEdges = customizableEdges9;
+            acceptBtn.CustomizableEdges = customizableEdges1;
             acceptBtn.DisabledState.BorderColor = Color.DarkGray;
             acceptBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             acceptBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -50,7 +50,7 @@
             acceptBtn.ForeColor = Color.White;
             acceptBtn.Location = new Point(30, 538);
             acceptBtn.Name = "acceptBtn";
-            acceptBtn.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            acceptBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
             acceptBtn.Size = new Size(141, 24);
             acceptBtn.TabIndex = 0;
             acceptBtn.Text = "Accept";
@@ -58,7 +58,7 @@
             // 
             // declineBtn
             // 
-            declineBtn.CustomizableEdges = customizableEdges11;
+            declineBtn.CustomizableEdges = customizableEdges3;
             declineBtn.DisabledState.BorderColor = Color.DarkGray;
             declineBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             declineBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -67,7 +67,7 @@
             declineBtn.ForeColor = Color.White;
             declineBtn.Location = new Point(220, 538);
             declineBtn.Name = "declineBtn";
-            declineBtn.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            declineBtn.ShadowDecoration.CustomizableEdges = customizableEdges4;
             declineBtn.Size = new Size(141, 24);
             declineBtn.TabIndex = 1;
             declineBtn.Text = "Decline";
@@ -84,11 +84,13 @@
             // agreementText
             // 
             agreementText.BackColor = Color.FromArgb(16, 22, 33);
+            agreementText.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             agreementText.ForeColor = Color.WhiteSmoke;
             agreementText.Location = new Point(3, 0);
             agreementText.Name = "agreementText";
             agreementText.ReadOnly = true;
-            agreementText.Size = new Size(303, 441);
+            agreementText.ScrollBars = RichTextBoxScrollBars.Vertical;
+            agreementText.Size = new Size(380, 444);
             agreementText.TabIndex = 1;
             agreementText.Text = "";
             // 
@@ -103,6 +105,7 @@
             Controls.Add(acceptBtn);
             FormBorderStyle = FormBorderStyle.None;
             Name = "UserAgreement";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "UserAgreement";
             panel1.ResumeLayout(false);
             ResumeLayout(false);
