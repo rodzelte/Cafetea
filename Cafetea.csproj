@@ -25,7 +25,6 @@
 
   <ItemGroup>
     <Folder Include="SuperAdminControls\" />
-    <Folder Include="StaffControls\" />
   </ItemGroup>
 
   <ItemGroup>

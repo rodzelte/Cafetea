@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using Cafetea.Database.Connection;
 
-namespace Cafetea.Database.FeedbackService
+namespace Cafetea.Database.Client.FeedbackService
 {
     public class Feedback
     {

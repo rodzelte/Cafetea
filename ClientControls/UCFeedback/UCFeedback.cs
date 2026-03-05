@@ -1,4 +1,4 @@
-﻿using Cafetea.Database.FeedbackService;
+﻿using Cafetea.Database.Client.FeedbackService;
 using System;
 using System.Linq;
 using System.Windows.Forms;

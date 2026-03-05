@@ -1,5 +1,5 @@
 ﻿using Cafetea.ClientControls.UCCustomer;
-using Cafetea.Database.CustomerService;
+using Cafetea.Database.Client.CustomerService;
 using System;
 using System.Linq;
 using System.Windows.Forms;

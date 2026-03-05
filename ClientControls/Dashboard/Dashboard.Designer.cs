@@ -76,9 +76,24 @@
             Guna.Charts.WinForms.ChartFont chartFont23 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.Tick tick9 = new Guna.Charts.WinForms.Tick();
             Guna.Charts.WinForms.ChartFont chartFont24 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont25 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont26 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont27 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont28 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid10 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick10 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont29 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid11 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick11 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont30 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid12 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.PointLabel pointLabel4 = new Guna.Charts.WinForms.PointLabel();
+            Guna.Charts.WinForms.ChartFont chartFont31 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Tick tick12 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont32 = new Guna.Charts.WinForms.ChartFont();
             panel1 = new Panel();
             logoName = new Label();
-            button1 = new Button();
+            exitBtn = new Button();
             pictureBox1 = new PictureBox();
             panel = new Panel();
             promoBtn = new Button();
@@ -87,9 +102,14 @@
             customerBtn = new Button();
             dashboardBtn = new Button();
             panelContainer = new Guna.UI2.WinForms.Guna2Panel();
-            SplineChart = new Guna.Charts.WinForms.GunaChart();
-            DoughnutChart = new Guna.Charts.WinForms.GunaChart();
-            gunaChart1 = new Guna.Charts.WinForms.GunaChart();
+            label4 = new Label();
+            revenueChart = new Guna.Charts.WinForms.GunaChart();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            gunaReviewChart = new Guna.Charts.WinForms.GunaChart();
+            MonthlyDoughnutChart = new Guna.Charts.WinForms.GunaChart();
+            gunaCustomerChart = new Guna.Charts.WinForms.GunaChart();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel.SuspendLayout();
@@ -99,7 +119,7 @@
             // panel1
             // 
             panel1.Controls.Add(logoName);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(exitBtn);
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
@@ -118,21 +138,21 @@
             logoName.TabIndex = 1;
             logoName.Text = "Cafetea CRM System";
             // 
-            // button1
+            // exitBtn
             // 
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.WhiteSmoke;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(1251, 28);
-            button1.Name = "button1";
-            button1.Size = new Size(91, 48);
-            button1.TabIndex = 4;
-            button1.Text = "    Exit";
-            button1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            exitBtn.FlatAppearance.BorderSize = 0;
+            exitBtn.FlatStyle = FlatStyle.Flat;
+            exitBtn.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            exitBtn.ForeColor = Color.WhiteSmoke;
+            exitBtn.Image = (Image)resources.GetObject("exitBtn.Image");
+            exitBtn.Location = new Point(1251, 28);
+            exitBtn.Name = "exitBtn";
+            exitBtn.Size = new Size(91, 48);
+            exitBtn.TabIndex = 4;
+            exitBtn.Text = "    Exit";
+            exitBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
+            exitBtn.UseVisualStyleBackColor = true;
+            exitBtn.Click += exitBtn_Click_1;
             // 
             // pictureBox1
             // 
@@ -241,120 +261,200 @@
             // panelContainer
             // 
             panelContainer.AutoScroll = true;
-            panelContainer.Controls.Add(SplineChart);
-            panelContainer.Controls.Add(DoughnutChart);
-            panelContainer.Controls.Add(gunaChart1);
+            panelContainer.Controls.Add(label4);
+            panelContainer.Controls.Add(revenueChart);
+            panelContainer.Controls.Add(label3);
+            panelContainer.Controls.Add(label2);
+            panelContainer.Controls.Add(label1);
+            panelContainer.Controls.Add(gunaReviewChart);
+            panelContainer.Controls.Add(MonthlyDoughnutChart);
+            panelContainer.Controls.Add(gunaCustomerChart);
             panelContainer.CustomizableEdges = customizableEdges1;
             panelContainer.Location = new Point(0, 203);
             panelContainer.Name = "panelContainer";
             panelContainer.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            panelContainer.Size = new Size(1447, 544);
+            panelContainer.Size = new Size(1447, 573);
             panelContainer.TabIndex = 3;
             // 
-            // SplineChart
+            // label4
             // 
-            SplineChart.BackColor = Color.FromArgb(16, 22, 33);
+            label4.AutoSize = true;
+            label4.ForeColor = Color.WhiteSmoke;
+            label4.Location = new Point(474, 90);
+            label4.Name = "label4";
+            label4.Size = new Size(61, 17);
+            label4.TabIndex = 7;
+            label4.Text = "Revenue";
+            // 
+            // revenueChart
+            // 
+            revenueChart.BackColor = Color.FromArgb(16, 22, 33);
             chartFont1.FontName = "Arial";
-            SplineChart.Legend.LabelFont = chartFont1;
-            SplineChart.Location = new Point(142, 72);
-            SplineChart.Name = "SplineChart";
-            SplineChart.Size = new Size(305, 216);
-            SplineChart.TabIndex = 0;
+            revenueChart.Legend.LabelFont = chartFont1;
+            revenueChart.Location = new Point(142, 72);
+            revenueChart.Name = "revenueChart";
+            revenueChart.Size = new Size(305, 216);
+            revenueChart.TabIndex = 6;
             chartFont2.FontName = "Arial";
             chartFont2.Size = 12;
             chartFont2.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            SplineChart.Title.Font = chartFont2;
+            revenueChart.Title.Font = chartFont2;
             chartFont3.FontName = "Arial";
-            SplineChart.Tooltips.BodyFont = chartFont3;
+            revenueChart.Tooltips.BodyFont = chartFont3;
             chartFont4.FontName = "Arial";
             chartFont4.Size = 9;
             chartFont4.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            SplineChart.Tooltips.TitleFont = chartFont4;
-            SplineChart.XAxes.GridLines = grid1;
+            revenueChart.Tooltips.TitleFont = chartFont4;
+            revenueChart.XAxes.GridLines = grid1;
             chartFont5.FontName = "Arial";
             tick1.Font = chartFont5;
-            SplineChart.XAxes.Ticks = tick1;
-            SplineChart.YAxes.GridLines = grid2;
+            revenueChart.XAxes.Ticks = tick1;
+            revenueChart.YAxes.GridLines = grid2;
             chartFont6.FontName = "Arial";
             tick2.Font = chartFont6;
-            SplineChart.YAxes.Ticks = tick2;
-            SplineChart.ZAxes.GridLines = grid3;
+            revenueChart.YAxes.Ticks = tick2;
+            revenueChart.ZAxes.GridLines = grid3;
             chartFont7.FontName = "Arial";
             pointLabel1.Font = chartFont7;
-            SplineChart.ZAxes.PointLabels = pointLabel1;
+            revenueChart.ZAxes.PointLabels = pointLabel1;
             chartFont8.FontName = "Arial";
             tick3.Font = chartFont8;
-            SplineChart.ZAxes.Ticks = tick3;
+            revenueChart.ZAxes.Ticks = tick3;
             // 
-            // DoughnutChart
+            // label3
             // 
-            DoughnutChart.BackColor = Color.FromArgb(16, 22, 33);
+            label3.AutoSize = true;
+            label3.ForeColor = Color.WhiteSmoke;
+            label3.Location = new Point(1055, 90);
+            label3.Name = "label3";
+            label3.Size = new Size(97, 17);
+            label3.TabIndex = 5;
+            label3.Text = "Monthly Orders";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.ForeColor = Color.WhiteSmoke;
+            label2.Location = new Point(474, 422);
+            label2.Name = "label2";
+            label2.Size = new Size(70, 17);
+            label2.TabIndex = 4;
+            label2.Text = "Customers";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.ForeColor = Color.WhiteSmoke;
+            label1.Location = new Point(1055, 439);
+            label1.Name = "label1";
+            label1.Size = new Size(57, 17);
+            label1.TabIndex = 3;
+            label1.Text = "Reviews";
+            // 
+            // gunaReviewChart
+            // 
+            gunaReviewChart.BackColor = Color.FromArgb(16, 22, 33);
             chartFont9.FontName = "Arial";
-            DoughnutChart.Legend.LabelFont = chartFont9;
-            DoughnutChart.Location = new Point(744, 72);
-            DoughnutChart.Name = "DoughnutChart";
-            DoughnutChart.Size = new Size(305, 216);
-            DoughnutChart.TabIndex = 1;
+            gunaReviewChart.Legend.LabelFont = chartFont9;
+            gunaReviewChart.Location = new Point(744, 422);
+            gunaReviewChart.Name = "gunaReviewChart";
+            gunaReviewChart.Size = new Size(305, 216);
+            gunaReviewChart.TabIndex = 0;
             chartFont10.FontName = "Arial";
             chartFont10.Size = 12;
             chartFont10.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            DoughnutChart.Title.Font = chartFont10;
+            gunaReviewChart.Title.Font = chartFont10;
             chartFont11.FontName = "Arial";
-            DoughnutChart.Tooltips.BodyFont = chartFont11;
+            gunaReviewChart.Tooltips.BodyFont = chartFont11;
             chartFont12.FontName = "Arial";
             chartFont12.Size = 9;
             chartFont12.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            DoughnutChart.Tooltips.TitleFont = chartFont12;
-            DoughnutChart.XAxes.GridLines = grid4;
+            gunaReviewChart.Tooltips.TitleFont = chartFont12;
+            gunaReviewChart.XAxes.GridLines = grid4;
             chartFont13.FontName = "Arial";
             tick4.Font = chartFont13;
-            DoughnutChart.XAxes.Ticks = tick4;
-            DoughnutChart.YAxes.GridLines = grid5;
+            gunaReviewChart.XAxes.Ticks = tick4;
+            gunaReviewChart.YAxes.GridLines = grid5;
             chartFont14.FontName = "Arial";
             tick5.Font = chartFont14;
-            DoughnutChart.YAxes.Ticks = tick5;
-            DoughnutChart.ZAxes.GridLines = grid6;
+            gunaReviewChart.YAxes.Ticks = tick5;
+            gunaReviewChart.ZAxes.GridLines = grid6;
             chartFont15.FontName = "Arial";
             pointLabel2.Font = chartFont15;
-            DoughnutChart.ZAxes.PointLabels = pointLabel2;
+            gunaReviewChart.ZAxes.PointLabels = pointLabel2;
             chartFont16.FontName = "Arial";
             tick6.Font = chartFont16;
-            DoughnutChart.ZAxes.Ticks = tick6;
+            gunaReviewChart.ZAxes.Ticks = tick6;
             // 
-            // gunaChart1
+            // MonthlyDoughnutChart
             // 
-            gunaChart1.BackColor = Color.FromArgb(16, 22, 33);
+            MonthlyDoughnutChart.BackColor = Color.FromArgb(16, 22, 33);
             chartFont17.FontName = "Arial";
-            gunaChart1.Legend.LabelFont = chartFont17;
-            gunaChart1.Location = new Point(142, 345);
-            gunaChart1.Name = "gunaChart1";
-            gunaChart1.Size = new Size(305, 216);
-            gunaChart1.TabIndex = 2;
+            MonthlyDoughnutChart.Legend.LabelFont = chartFont17;
+            MonthlyDoughnutChart.Location = new Point(744, 72);
+            MonthlyDoughnutChart.Name = "MonthlyDoughnutChart";
+            MonthlyDoughnutChart.Size = new Size(305, 216);
+            MonthlyDoughnutChart.TabIndex = 1;
             chartFont18.FontName = "Arial";
             chartFont18.Size = 12;
             chartFont18.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            gunaChart1.Title.Font = chartFont18;
+            MonthlyDoughnutChart.Title.Font = chartFont18;
             chartFont19.FontName = "Arial";
-            gunaChart1.Tooltips.BodyFont = chartFont19;
+            MonthlyDoughnutChart.Tooltips.BodyFont = chartFont19;
             chartFont20.FontName = "Arial";
             chartFont20.Size = 9;
             chartFont20.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            gunaChart1.Tooltips.TitleFont = chartFont20;
-            gunaChart1.XAxes.GridLines = grid7;
+            MonthlyDoughnutChart.Tooltips.TitleFont = chartFont20;
+            MonthlyDoughnutChart.XAxes.GridLines = grid7;
             chartFont21.FontName = "Arial";
             tick7.Font = chartFont21;
-            gunaChart1.XAxes.Ticks = tick7;
-            gunaChart1.YAxes.GridLines = grid8;
+            MonthlyDoughnutChart.XAxes.Ticks = tick7;
+            MonthlyDoughnutChart.YAxes.GridLines = grid8;
             chartFont22.FontName = "Arial";
             tick8.Font = chartFont22;
-            gunaChart1.YAxes.Ticks = tick8;
-            gunaChart1.ZAxes.GridLines = grid9;
+            MonthlyDoughnutChart.YAxes.Ticks = tick8;
+            MonthlyDoughnutChart.ZAxes.GridLines = grid9;
             chartFont23.FontName = "Arial";
             pointLabel3.Font = chartFont23;
-            gunaChart1.ZAxes.PointLabels = pointLabel3;
+            MonthlyDoughnutChart.ZAxes.PointLabels = pointLabel3;
             chartFont24.FontName = "Arial";
             tick9.Font = chartFont24;
-            gunaChart1.ZAxes.Ticks = tick9;
+            MonthlyDoughnutChart.ZAxes.Ticks = tick9;
+            // 
+            // gunaCustomerChart
+            // 
+            gunaCustomerChart.BackColor = Color.FromArgb(16, 22, 33);
+            chartFont25.FontName = "Arial";
+            gunaCustomerChart.Legend.LabelFont = chartFont25;
+            gunaCustomerChart.Location = new Point(142, 404);
+            gunaCustomerChart.Name = "gunaCustomerChart";
+            gunaCustomerChart.Size = new Size(305, 216);
+            gunaCustomerChart.TabIndex = 2;
+            chartFont26.FontName = "Arial";
+            chartFont26.Size = 12;
+            chartFont26.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            gunaCustomerChart.Title.Font = chartFont26;
+            chartFont27.FontName = "Arial";
+            gunaCustomerChart.Tooltips.BodyFont = chartFont27;
+            chartFont28.FontName = "Arial";
+            chartFont28.Size = 9;
+            chartFont28.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            gunaCustomerChart.Tooltips.TitleFont = chartFont28;
+            gunaCustomerChart.XAxes.GridLines = grid10;
+            chartFont29.FontName = "Arial";
+            tick10.Font = chartFont29;
+            gunaCustomerChart.XAxes.Ticks = tick10;
+            gunaCustomerChart.YAxes.GridLines = grid11;
+            chartFont30.FontName = "Arial";
+            tick11.Font = chartFont30;
+            gunaCustomerChart.YAxes.Ticks = tick11;
+            gunaCustomerChart.ZAxes.GridLines = grid12;
+            chartFont31.FontName = "Arial";
+            pointLabel4.Font = chartFont31;
+            gunaCustomerChart.ZAxes.PointLabels = pointLabel4;
+            chartFont32.FontName = "Arial";
+            tick12.Font = chartFont32;
+            gunaCustomerChart.ZAxes.Ticks = tick12;
             // 
             // Dashboard
             // 
@@ -369,12 +469,12 @@
             Name = "Dashboard";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
-            Load += Dashboard_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel.ResumeLayout(false);
             panelContainer.ResumeLayout(false);
+            panelContainer.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -388,11 +488,16 @@
         private Button orderBtn;
         private Button customerBtn;
         private Button feedbackBtn;
-        private Button button1;
+        private Button exitBtn;
         private Button promoBtn;
         private Guna.UI2.WinForms.Guna2Panel panelContainer;
-        private Guna.Charts.WinForms.GunaChart SplineChart;
-        private Guna.Charts.WinForms.GunaChart DoughnutChart;
-        private Guna.Charts.WinForms.GunaChart gunaChart1;
+        private Guna.Charts.WinForms.GunaChart gunaReviewChart;
+        private Guna.Charts.WinForms.GunaChart MonthlyDoughnutChart;
+        private Guna.Charts.WinForms.GunaChart gunaCustomerChart;
+        private Label label4;
+        private Guna.Charts.WinForms.GunaChart revenueChart;
+        private Label label3;
+        private Label label2;
+        private Label label1;
     }
 }

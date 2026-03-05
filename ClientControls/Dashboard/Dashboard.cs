@@ -1,37 +1,73 @@
 using BasicExamples;
 using Cafetea.AdminControls;
-using System.Runtime.InteropServices;
+using System;
+using System.Windows.Forms;
 
 namespace Cafetea
 {
     public partial class Dashboard : Form
     {
+        // Panel to hold the dashboard charts (nullable for C# 10)
+        private Panel? dashboardPanel;
 
 
         public Dashboard()
         {
             InitializeComponent();
-            this.Load += Dashboard_Load;
+
+            // Initialize dashboard panel and charts
+            InitializeDashboardPanel();
+
+            // Show dashboard by default
+            ShowDashboard();
         }
 
+        #region Panel Initialization
+        private void InitializeDashboardPanel()
+        {
+            dashboardPanel = new Panel();
+            dashboardPanel.Dock = DockStyle.Fill;
 
+            // Add Guna charts to the panel
+            dashboardPanel.Controls.Add(revenueChart);
+            dashboardPanel.Controls.Add(MonthlyDoughnutChart);
+            dashboardPanel.Controls.Add(gunaCustomerChart);
+            dashboardPanel.Controls.Add(gunaReviewChart);
 
+            panelContainer.Controls.Add(dashboardPanel);
+        }
+        #endregion
+
+        #region Load Admin Controls
         public void LoadAdminControl(UserControl control)
         {
             control.Dock = DockStyle.Fill;
+
             panelContainer.Controls.Clear();
             panelContainer.Controls.Add(control);
             control.BringToFront();
-
-
         }
+        #endregion
 
-        // DONT TOUCH THESE METHODS//
+        #region Dashboard Button
         private void dashboardBtn_Click(object sender, EventArgs e)
         {
-            LoadAdminControl(new UCDashboard());
+            ShowDashboard();
         }
 
+        private void ShowDashboard()
+        {
+            if (dashboardPanel == null) return; // safety check
+
+            panelContainer.Controls.Clear();
+            panelContainer.Controls.Add(dashboardPanel);
+            dashboardPanel.BringToFront();
+
+            LoadCharts(); // refresh chart data
+        }
+        #endregion
+
+        #region Other Buttons
         private void customerBtn_Click(object sender, EventArgs e)
         {
             LoadAdminControl(new UCCustomer());
@@ -52,20 +88,20 @@ namespace Cafetea
             LoadAdminControl(new UCPromos());
         }
 
-
-        private void button1_Click(object sender, EventArgs e)
+        private void exitBtn_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
-        }       // DONT TOUCH THESE METHODS//
-
-        private void Dashboard_Load(object? sender, EventArgs e)
-        {
-            Spline.Example(SplineChart);
-            Doughnut.Example(DoughnutChart);
-
-
         }
+        #endregion
 
-
+        #region Load Charts
+        public void LoadCharts()
+        {
+            RevenueSpline.Example(revenueChart);
+            MonthlyDoughnut.Example(MonthlyDoughnutChart);
+            CustomerDoughnutChart.Example(gunaCustomerChart);
+            ReviewSplineChart.Example(gunaReviewChart);
+        }
+        #endregion
     }
 }

@@ -1,7 +1,7 @@
 ﻿using Microsoft.Data.SqlClient;
 
 
-namespace Cafetea.Database.FormService
+namespace Cafetea.Database.Client.FormService
 {
     public static class UserService
     {

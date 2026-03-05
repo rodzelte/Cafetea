@@ -440,11 +440,13 @@
             // 
             // flowLayoutPanelOrder
             // 
+            flowLayoutPanelOrder.AutoScroll = true;
             flowLayoutPanelOrder.Controls.Add(orderPanel);
             flowLayoutPanelOrder.Location = new Point(145, 347);
             flowLayoutPanelOrder.Name = "flowLayoutPanelOrder";
             flowLayoutPanelOrder.Size = new Size(963, 104);
             flowLayoutPanelOrder.TabIndex = 11;
+            flowLayoutPanelOrder.WrapContents = false;
             // 
             // UCOrders
             // 

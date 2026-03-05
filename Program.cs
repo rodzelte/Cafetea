@@ -1,4 +1,6 @@
 using Cafetea.Forms;
+using Cafetea.StaffControls.Dashboard;
+using Cafetea.StaffControls.UCOrder;
 
 
 namespace Cafetea
@@ -16,7 +18,7 @@ namespace Cafetea
                 {
                     conn.Open();
                     MessageBox.Show("Successfully connected to the database!");
-                    Application.Run(new Dashboard());
+                    Application.Run(new StaffDashboard());
                 }
             }
             catch (Exception ex)

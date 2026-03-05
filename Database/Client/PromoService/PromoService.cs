@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Cafetea.Database
+namespace Cafetea.Database.Client.PromoService
 {
     public static class PromoService
     {

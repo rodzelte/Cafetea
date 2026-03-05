@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using Cafetea.Database.Connection;
 
-namespace Cafetea.Database.CustomerService
+namespace Cafetea.Database.Client.CustomerService
 {
     public class CustomerService
     {

@@ -1,5 +1,5 @@
 ﻿using Cafetea.ClientControls.UCPromo;
-using Cafetea.Database;
+using Cafetea.Database.Client.PromoService;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
